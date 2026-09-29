@@ -1,5 +1,4 @@
 from pathlib import Path
-
 from behavclone.fragments.models import MethodFragment
 from behavclone.fragments.starter import (
     StarterSignature,
@@ -8,12 +7,12 @@ from behavclone.fragments.starter import (
 from behavclone.matching.assignment import maximum_weight_assignment
 from behavclone.matching.models import (
     FragmentSimilarity,
+    MatchingMetric,
     SubmissionComparison,
     SubmissionFragmentMatch,
 )
 from behavclone.matching.similarity import compare_fragments
 from behavclone.parsing.java import extract_method_fragments
-
 
 def extract_submission_fragments(
     source_files: list[Path],
@@ -43,14 +42,34 @@ def extract_submission_fragments(
     )
 
 
+def _metric_score(
+    similarity: FragmentSimilarity,
+    metric: MatchingMetric,
+) -> float:
+    """Select the representation used to optimize correspondence."""
+    if metric == "raw":
+        return similarity.raw
+
+    if metric == "normalized":
+        return similarity.normalized
+
+    if metric == "structural":
+        return similarity.structural
+
+    raise ValueError(
+        f"Unsupported matching metric: {metric}"
+    )
+
+
 def build_similarity_matrix(
     left: list[MethodFragment],
     right: list[MethodFragment],
+    metric: MatchingMetric = "normalized",
 ) -> tuple[
     list[list[float]],
     list[list[FragmentSimilarity]],
 ]:
-    """Build all-pairs normalized similarity evidence."""
+    """Build all-pairs evidence and a metric-specific score matrix."""
     score_matrix: list[list[float]] = []
     evidence_matrix: list[list[FragmentSimilarity]] = []
 
@@ -64,7 +83,12 @@ def build_similarity_matrix(
                 right_fragment.source,
             )
 
-            score_row.append(similarity.normalized)
+            score_row.append(
+                _metric_score(
+                    similarity,
+                    metric,
+                )
+            )
             evidence_row.append(similarity)
 
         score_matrix.append(score_row)
@@ -77,8 +101,9 @@ def compare_submissions(
     left_files: list[Path],
     right_files: list[Path],
     starter_signatures: frozenset[StarterSignature] | None = None,
+    metric: MatchingMetric = "normalized",
 ) -> SubmissionComparison:
-    """Compare two submissions without positional file/method matching."""
+    """Compare submissions using metric-selected global correspondence."""
     left = extract_submission_fragments(
         left_files,
         starter_signatures,
@@ -98,9 +123,12 @@ def compare_submissions(
     score_matrix, evidence_matrix = build_similarity_matrix(
         left,
         right,
+        metric=metric,
     )
 
-    assignment = maximum_weight_assignment(score_matrix)
+    assignment = maximum_weight_assignment(
+        score_matrix
+    )
 
     matches = tuple(
         SubmissionFragmentMatch(
@@ -130,6 +158,7 @@ def compare_assignment_submissions(
     left_files: list[Path],
     right_files: list[Path],
     starter_files: list[Path],
+    metric: MatchingMetric = "normalized",
 ) -> SubmissionComparison:
     """Compare submissions after excluding configured starter fragments."""
     from behavclone.fragments.starter import build_starter_signatures
@@ -142,4 +171,5 @@ def compare_assignment_submissions(
         left_files,
         right_files,
         starter_signatures=starter_signatures,
+        metric=metric,
     )

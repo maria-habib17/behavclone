@@ -1,5 +1,13 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Literal
+
+
+MatchingMetric = Literal[
+    "raw",
+    "normalized",
+    "structural",
+]
 
 
 @dataclass(frozen=True)
@@ -70,6 +78,16 @@ class SubmissionComparison:
             return 0.0
 
         return self.matched_count / self.right_fragment_count
+
+    @property
+    def mean_raw_similarity(self) -> float:
+        if not self.matches:
+            return 0.0
+
+        return sum(
+            match.similarity.raw
+            for match in self.matches
+        ) / self.matched_count
 
     @property
     def mean_normalized_similarity(self) -> float:
