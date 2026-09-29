@@ -9,7 +9,9 @@ description = "Evidence-oriented similarity analysis for architecture-flexible p
 requires-python = ">=3.11"
 dependencies = [
     "pydantic>=2.0",
-    "PyYAML>=6.0"
+    "PyYAML>=6.0",
+    "tree-sitter==0.26.0",
+    "tree-sitter-java==0.23.5"
 ]
 
 [project.optional-dependencies]
