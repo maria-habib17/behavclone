@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from behavclone.fragments.models import MethodFragment
 from behavclone.fragments.starter import (
     StarterSignature,
@@ -13,6 +14,7 @@ from behavclone.matching.models import (
 )
 from behavclone.matching.similarity import compare_fragments
 from behavclone.parsing.java import extract_method_fragments
+
 
 def extract_submission_fragments(
     source_files: list[Path],
