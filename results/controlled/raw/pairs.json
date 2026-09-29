@@ -1,0 +1,83 @@
+[
+  {
+    "left_submission_id": "BASE",
+    "normalized_similarity": 1.0,
+    "raw_similarity": 0.7777777777777778,
+    "related": true,
+    "right_submission_id": "ID_RENAME",
+    "structural_similarity": 1.0,
+    "transformation": "identifier_rename"
+  },
+  {
+    "left_submission_id": "BASE",
+    "normalized_similarity": 1.0,
+    "raw_similarity": 1.0,
+    "related": true,
+    "right_submission_id": "METHOD_REORDER",
+    "structural_similarity": 1.0,
+    "transformation": "method_reorder"
+  },
+  {
+    "left_submission_id": "BASE",
+    "normalized_similarity": 1.0,
+    "raw_similarity": 1.0,
+    "related": true,
+    "right_submission_id": "CLASS_RENAME",
+    "structural_similarity": 1.0,
+    "transformation": "class_rename"
+  },
+  {
+    "left_submission_id": "BASE",
+    "normalized_similarity": 1.0,
+    "raw_similarity": 1.0,
+    "related": true,
+    "right_submission_id": "FILE_RENAME",
+    "structural_similarity": 1.0,
+    "transformation": "file_rename"
+  },
+  {
+    "left_submission_id": "BASE",
+    "normalized_similarity": 0.8372093023255814,
+    "raw_similarity": 0.8372093023255814,
+    "related": true,
+    "right_submission_id": "DEAD_CODE",
+    "structural_similarity": 0.8450704225352113,
+    "transformation": "dead_code"
+  },
+  {
+    "left_submission_id": "BASE",
+    "normalized_similarity": 1.0,
+    "raw_similarity": 1.0,
+    "related": true,
+    "right_submission_id": "CLASS_SPLIT",
+    "structural_similarity": 1.0,
+    "transformation": "class_split"
+  },
+  {
+    "left_submission_id": "BASE",
+    "normalized_similarity": 0.5757575757575757,
+    "raw_similarity": 0.3939393939393939,
+    "related": false,
+    "right_submission_id": "UNRELATED_A",
+    "structural_similarity": 0.5978336827393431,
+    "transformation": "control"
+  },
+  {
+    "left_submission_id": "BASE",
+    "normalized_similarity": 0.6725806451612903,
+    "raw_similarity": 0.4508064516129032,
+    "related": false,
+    "right_submission_id": "UNRELATED_B",
+    "structural_similarity": 0.6871794871794872,
+    "transformation": "control"
+  },
+  {
+    "left_submission_id": "BASE",
+    "normalized_similarity": 1.0,
+    "raw_similarity": 0.6666666666666666,
+    "related": false,
+    "right_submission_id": "LOOKALIKE",
+    "structural_similarity": 1.0,
+    "transformation": "control"
+  }
+]

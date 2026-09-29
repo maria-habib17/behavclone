@@ -1,0 +1,239 @@
+{
+  "normalized": {
+    "best_unrelated_rank": 5,
+    "mean_related_rank": 3.8333333333333335,
+    "metric": "normalized",
+    "ranked_pairs": [
+      {
+        "left_submission_id": "BASE",
+        "rank": 1,
+        "related": true,
+        "right_submission_id": "CLASS_RENAME",
+        "score": 1.0,
+        "transformation": "class_rename"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 2,
+        "related": true,
+        "right_submission_id": "CLASS_SPLIT",
+        "score": 1.0,
+        "transformation": "class_split"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 3,
+        "related": true,
+        "right_submission_id": "FILE_RENAME",
+        "score": 1.0,
+        "transformation": "file_rename"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 4,
+        "related": true,
+        "right_submission_id": "ID_RENAME",
+        "score": 1.0,
+        "transformation": "identifier_rename"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 5,
+        "related": false,
+        "right_submission_id": "LOOKALIKE",
+        "score": 1.0,
+        "transformation": "control"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 6,
+        "related": true,
+        "right_submission_id": "METHOD_REORDER",
+        "score": 1.0,
+        "transformation": "method_reorder"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 7,
+        "related": true,
+        "right_submission_id": "DEAD_CODE",
+        "score": 0.8372093023255814,
+        "transformation": "dead_code"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 8,
+        "related": false,
+        "right_submission_id": "UNRELATED_B",
+        "score": 0.6725806451612903,
+        "transformation": "control"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 9,
+        "related": false,
+        "right_submission_id": "UNRELATED_A",
+        "score": 0.5757575757575757,
+        "transformation": "control"
+      }
+    ]
+  },
+  "raw": {
+    "best_unrelated_rank": 7,
+    "mean_related_rank": 3.5,
+    "metric": "raw",
+    "ranked_pairs": [
+      {
+        "left_submission_id": "BASE",
+        "rank": 1,
+        "related": true,
+        "right_submission_id": "CLASS_RENAME",
+        "score": 1.0,
+        "transformation": "class_rename"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 2,
+        "related": true,
+        "right_submission_id": "CLASS_SPLIT",
+        "score": 1.0,
+        "transformation": "class_split"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 3,
+        "related": true,
+        "right_submission_id": "FILE_RENAME",
+        "score": 1.0,
+        "transformation": "file_rename"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 4,
+        "related": true,
+        "right_submission_id": "METHOD_REORDER",
+        "score": 1.0,
+        "transformation": "method_reorder"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 5,
+        "related": true,
+        "right_submission_id": "DEAD_CODE",
+        "score": 0.8372093023255814,
+        "transformation": "dead_code"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 6,
+        "related": true,
+        "right_submission_id": "ID_RENAME",
+        "score": 0.7777777777777778,
+        "transformation": "identifier_rename"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 7,
+        "related": false,
+        "right_submission_id": "LOOKALIKE",
+        "score": 0.6666666666666666,
+        "transformation": "control"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 8,
+        "related": false,
+        "right_submission_id": "UNRELATED_B",
+        "score": 0.4508064516129032,
+        "transformation": "control"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 9,
+        "related": false,
+        "right_submission_id": "UNRELATED_A",
+        "score": 0.3939393939393939,
+        "transformation": "control"
+      }
+    ]
+  },
+  "structural": {
+    "best_unrelated_rank": 5,
+    "mean_related_rank": 3.8333333333333335,
+    "metric": "structural",
+    "ranked_pairs": [
+      {
+        "left_submission_id": "BASE",
+        "rank": 1,
+        "related": true,
+        "right_submission_id": "CLASS_RENAME",
+        "score": 1.0,
+        "transformation": "class_rename"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 2,
+        "related": true,
+        "right_submission_id": "CLASS_SPLIT",
+        "score": 1.0,
+        "transformation": "class_split"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 3,
+        "related": true,
+        "right_submission_id": "FILE_RENAME",
+        "score": 1.0,
+        "transformation": "file_rename"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 4,
+        "related": true,
+        "right_submission_id": "ID_RENAME",
+        "score": 1.0,
+        "transformation": "identifier_rename"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 5,
+        "related": false,
+        "right_submission_id": "LOOKALIKE",
+        "score": 1.0,
+        "transformation": "control"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 6,
+        "related": true,
+        "right_submission_id": "METHOD_REORDER",
+        "score": 1.0,
+        "transformation": "method_reorder"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 7,
+        "related": true,
+        "right_submission_id": "DEAD_CODE",
+        "score": 0.8450704225352113,
+        "transformation": "dead_code"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 8,
+        "related": false,
+        "right_submission_id": "UNRELATED_B",
+        "score": 0.6871794871794872,
+        "transformation": "control"
+      },
+      {
+        "left_submission_id": "BASE",
+        "rank": 9,
+        "related": false,
+        "right_submission_id": "UNRELATED_A",
+        "score": 0.5978336827393431,
+        "transformation": "control"
+      }
+    ]
+  }
+}

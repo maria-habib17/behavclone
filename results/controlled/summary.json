@@ -1,0 +1,74 @@
+{
+  "assignment_metrics": [
+    "raw",
+    "normalized",
+    "structural"
+  ],
+  "experiment": "controlled-transformations",
+  "pair_count": 9,
+  "runs": {
+    "normalized": {
+      "assignment_metric": "normalized",
+      "rankings": {
+        "normalized": {
+          "best_unrelated_rank": 5,
+          "mean_related_rank": 3.8333333333333335
+        },
+        "raw": {
+          "best_unrelated_rank": 7,
+          "mean_related_rank": 3.5
+        },
+        "structural": {
+          "best_unrelated_rank": 5,
+          "mean_related_rank": 3.8333333333333335
+        }
+      },
+      "related_pair_count": 6,
+      "unrelated_pair_count": 3
+    },
+    "raw": {
+      "assignment_metric": "raw",
+      "rankings": {
+        "normalized": {
+          "best_unrelated_rank": 5,
+          "mean_related_rank": 3.8333333333333335
+        },
+        "raw": {
+          "best_unrelated_rank": 7,
+          "mean_related_rank": 3.5
+        },
+        "structural": {
+          "best_unrelated_rank": 5,
+          "mean_related_rank": 3.8333333333333335
+        }
+      },
+      "related_pair_count": 6,
+      "unrelated_pair_count": 3
+    },
+    "structural": {
+      "assignment_metric": "structural",
+      "rankings": {
+        "normalized": {
+          "best_unrelated_rank": 5,
+          "mean_related_rank": 3.8333333333333335
+        },
+        "raw": {
+          "best_unrelated_rank": 7,
+          "mean_related_rank": 3.5
+        },
+        "structural": {
+          "best_unrelated_rank": 5,
+          "mean_related_rank": 3.8333333333333335
+        }
+      },
+      "related_pair_count": 6,
+      "unrelated_pair_count": 3
+    }
+  },
+  "similarity_metrics": [
+    "raw",
+    "normalized",
+    "structural"
+  ],
+  "submission_count": 10
+}

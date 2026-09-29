@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "pairs.csv": "7864d6dc1fc32410ab8283c763b2158c626f153c18fd1c0c392aedfd7ece98a0",
+    "pairs.json": "54f438d0cc8e75b0efb08c430d3da4305c72089141bc2275d246cc76397f7a52"
+  },
+  "assignment_metric": "raw",
+  "experiment": "controlled-transformations",
+  "pair_count": 9,
+  "related_pair_count": 6,
+  "submission_count": 10,
+  "unrelated_pair_count": 3
+}
