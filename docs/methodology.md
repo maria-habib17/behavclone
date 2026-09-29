@@ -122,3 +122,97 @@ Future evaluation should measure sensitivity to n-gram size and cohort
 composition, compare alternative feature representations, and quantify whether
 cohort-relative evidence improves false-positive surfacing on authentic
 non-plagiarized submissions.
+
+## Behavioral evidence from imported test outcomes
+
+BehavClone treats externally observed program behavior as a separate evidence
+channel. Version 0.1 does not execute untrusted student submissions. Instead,
+it imports results produced by an instructor-controlled or otherwise external
+test harness.
+
+The baseline CSV representation records:
+
+    submission,test,status,expected,actual
+
+Each observation identifies one submission, one test, its PASS or FAIL status,
+the expected output, and the observed output.
+
+### Correct behavior is not similarity evidence
+
+When an assignment specifies required input/output behavior, independently
+correct submissions are expected to produce the same result. BehavClone
+therefore does not treat shared successful tests or identical correct outputs
+as behavioral similarity evidence.
+
+The initial behavioral comparison surfaces a test only when both compared
+submissions fail that test.
+
+For a test t, BehavClone records the cohort-level failure frequency:
+
+    DF_fail(t) = number of submissions that fail t
+
+Given N submissions represented in the behavioral dataset, failure rarity is:
+
+    R_fail(t) = ln((N + 1) / (DF_fail(t) + 1)) + 1
+
+This describes how widespread the failure is within the observed cohort.
+
+### Identical wrong outputs
+
+Two submissions can fail the same test in different ways. BehavClone therefore
+keeps shared failure and identical wrong output as distinct observations.
+
+For a failed test t and observed wrong output o:
+
+    DF_wrong(t, o) =
+        number of submissions that fail t with exact observed output o
+
+The corresponding rarity quantity is:
+
+    R_wrong(t, o) =
+        ln((N + 1) / (DF_wrong(t, o) + 1)) + 1
+
+Exact wrong-output comparison is deliberately conservative in the initial
+baseline: imported output strings are preserved rather than automatically
+coerced or normalized. Alternative output-equivalence definitions can be
+evaluated later as separate experimental conditions.
+
+A frequently failed test may still contain a less common wrong-output pattern.
+BehavClone therefore reports failure prevalence and wrong-output prevalence
+separately instead of collapsing them into one behavioral score.
+
+### Interpretation and safety boundary
+
+Shared failures, identical wrong outputs, and their cohort rarity values are
+evidence for human review. They are not plagiarism probabilities, verdicts, or
+universal thresholds.
+
+Behavioral evidence is also kept separate from structural similarity and
+structural cohort rarity. This supports ablation experiments that can compare:
+
+- structural matching alone;
+- structural matching with cohort-relative structural evidence;
+- behavioral failure evidence alone; and
+- combinations of structural and behavioral evidence.
+
+Version 0.1 imports test observations rather than executing student programs.
+This keeps untrusted code execution outside the BehavClone analysis process.
+
+### Current limitations
+
+The behavioral baseline depends on the quality and coverage of the external
+test suite. A shared failure can arise independently when a test targets a
+common misconception, difficult edge case, ambiguous requirement, or common
+implementation bug.
+
+Likewise, an identical wrong output is not inherently evidence of copying.
+Simple or highly constrained errors may naturally produce the same output in
+multiple independent submissions.
+
+Cohort composition also affects rarity values. Behavioral evidence should
+therefore be interpreted alongside assignment design, test semantics,
+structural evidence, and instructor review rather than in isolation.
+
+Future evaluation should measure whether rare shared failures and rare
+identical wrong outputs improve candidate surfacing on controlled synthetic
+transformations and authentic non-plagiarized submissions.
