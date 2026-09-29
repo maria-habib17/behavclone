@@ -24,8 +24,8 @@ def extract_submission_fragments(
     File names and class names do not define correspondence. They are
     retained only as evidence metadata.
 
-    When starter signatures are supplied, fragments with an exactly equal
-    normalized starter signature are excluded before matching.
+    When starter signatures are supplied, fragments with an equal
+    conservative starter signature are excluded before matching.
     """
     fragments: list[MethodFragment] = []
 
