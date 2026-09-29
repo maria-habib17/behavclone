@@ -20,7 +20,7 @@ def discover_java_files(root: Path) -> list[Path]:
 
 
 def load_assignment(root: str | Path) -> Assignment:
-    """Load an assignment and discover its submissions."""
+    """Load an assignment and discover submissions and starter files."""
 
     root = Path(root).resolve()
 
@@ -74,8 +74,17 @@ def load_assignment(root: str | Path) -> Assignment:
             )
         )
 
+    starter_files: list[Path] = []
+
+    if config.starter_directory is not None:
+        starter_root = root / config.starter_directory
+
+        if starter_root.is_dir():
+            starter_files = discover_java_files(starter_root)
+
     return Assignment(
         root=root,
         config=config,
         submissions=submissions,
+        starter_files=starter_files,
     )

@@ -225,7 +225,7 @@ def test_global_assignment_prefers_true_correspondence_over_distractor(
     )
 
     print()
-    print("ALL CANDIDATE PAIRS")
+    print("SELECTED ASSIGNMENT")
     print("=" * 80)
 
     for left_index, left_fragment in enumerate(left_fragments):
@@ -274,3 +274,76 @@ def test_global_assignment_prefers_true_correspondence_over_distractor(
 
     assert result.left_coverage == pytest.approx(1.0)
     assert result.right_coverage == pytest.approx(2 / 3)
+
+
+def test_submission_matching_excludes_normalized_starter_fragments(
+    tmp_path: Path,
+):
+    from behavclone.fragments.starter import build_starter_signatures
+
+    starter = write_java(
+        tmp_path / "starter" / "Template.java",
+        """
+        class Template {
+            int helper(int value) {
+                return value + 1;
+            }
+        }
+        """,
+    )
+
+    left = write_java(
+        tmp_path / "left" / "Left.java",
+        """
+        class Left {
+            int renamedHelper(int number) {
+                return number + 1;
+            }
+
+            int calculate(int price, int discount) {
+                return price - discount;
+            }
+        }
+        """,
+    )
+
+    right = write_java(
+        tmp_path / "right" / "Right.java",
+        """
+        class Right {
+            int anotherHelper(int input) {
+                return input + 1;
+            }
+
+            int compute(int amount, int reduction) {
+                return amount - reduction;
+            }
+        }
+        """,
+    )
+
+    starter_signatures = build_starter_signatures(
+        [starter]
+    )
+
+    result = compare_submissions(
+        [left],
+        [right],
+        starter_signatures=starter_signatures,
+    )
+
+    pairs = {
+        (match.left_name, match.right_name)
+        for match in result.matches
+    }
+
+    assert result.left_fragment_count == 1
+    assert result.right_fragment_count == 1
+    assert result.matched_count == 1
+
+    assert pairs == {
+        ("calculate", "compute"),
+    }
+
+    assert result.left_coverage == pytest.approx(1.0)
+    assert result.right_coverage == pytest.approx(1.0)

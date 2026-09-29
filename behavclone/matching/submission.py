@@ -1,6 +1,10 @@
 from pathlib import Path
 
 from behavclone.fragments.models import MethodFragment
+from behavclone.fragments.starter import (
+    StarterSignature,
+    filter_starter_fragments,
+)
 from behavclone.matching.assignment import maximum_weight_assignment
 from behavclone.matching.models import (
     FragmentSimilarity,
@@ -13,13 +17,16 @@ from behavclone.parsing.java import extract_method_fragments
 
 def extract_submission_fragments(
     source_files: list[Path],
+    starter_signatures: frozenset[StarterSignature] | None = None,
 ) -> list[MethodFragment]:
-    """Extract methods from every Java file in one submission.
+    """Extract comparable fragments from every Java file in a submission.
 
     File names and class names do not define correspondence. They are
     retained only as evidence metadata.
-    """
 
+    When starter signatures are supplied, fragments with an exactly equal
+    normalized starter signature are excluded before matching.
+    """
     fragments: list[MethodFragment] = []
 
     for source_file in sorted(source_files):
@@ -27,7 +34,13 @@ def extract_submission_fragments(
             extract_method_fragments(source_file)
         )
 
-    return fragments
+    if starter_signatures is None:
+        return fragments
+
+    return filter_starter_fragments(
+        fragments,
+        starter_signatures,
+    )
 
 
 def build_similarity_matrix(
@@ -38,7 +51,6 @@ def build_similarity_matrix(
     list[list[FragmentSimilarity]],
 ]:
     """Build all-pairs normalized similarity evidence."""
-
     score_matrix: list[list[float]] = []
     evidence_matrix: list[list[FragmentSimilarity]] = []
 
@@ -64,11 +76,17 @@ def build_similarity_matrix(
 def compare_submissions(
     left_files: list[Path],
     right_files: list[Path],
+    starter_signatures: frozenset[StarterSignature] | None = None,
 ) -> SubmissionComparison:
     """Compare two submissions without positional file/method matching."""
-
-    left = extract_submission_fragments(left_files)
-    right = extract_submission_fragments(right_files)
+    left = extract_submission_fragments(
+        left_files,
+        starter_signatures,
+    )
+    right = extract_submission_fragments(
+        right_files,
+        starter_signatures,
+    )
 
     if not left or not right:
         return SubmissionComparison(
@@ -105,4 +123,23 @@ def compare_submissions(
         left_fragment_count=len(left),
         right_fragment_count=len(right),
         matches=matches,
+    )
+
+
+def compare_assignment_submissions(
+    left_files: list[Path],
+    right_files: list[Path],
+    starter_files: list[Path],
+) -> SubmissionComparison:
+    """Compare submissions after excluding configured starter fragments."""
+    from behavclone.fragments.starter import build_starter_signatures
+
+    starter_signatures = build_starter_signatures(
+        starter_files
+    )
+
+    return compare_submissions(
+        left_files,
+        right_files,
+        starter_signatures=starter_signatures,
     )

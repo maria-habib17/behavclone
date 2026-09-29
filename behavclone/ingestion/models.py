@@ -22,8 +22,9 @@ class Submission(BaseModel):
 
 
 class Assignment(BaseModel):
-    """An assignment together with its discovered submissions."""
+    """An assignment together with its discovered source material."""
 
     root: Path
     config: AssignmentConfig
     submissions: list[Submission] = Field(default_factory=list)
+    starter_files: list[Path] = Field(default_factory=list)
