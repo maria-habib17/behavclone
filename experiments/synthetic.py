@@ -29,6 +29,7 @@ def _write_submission(
 def write_synthetic_assignment(
     root: Path,
     submissions: tuple[SyntheticSubmission, ...],
+    behavioral_results: str | None = None,
 ) -> None:
     """Write a deterministic Java assignment for benchmark experiments."""
     submissions_root = root / "submissions"
@@ -41,7 +42,11 @@ def write_synthetic_assignment(
             "  language: java\n"
             "  submissions_directory: submissions\n"
             "  starter_directory: null\n"
-            "  test_results: null\n"
+            + (
+                "  test_results: test-results.csv\n"
+                if behavioral_results is not None
+                else "  test_results: null\n"
+            )
         ),
         encoding="utf-8",
     )
@@ -50,6 +55,12 @@ def write_synthetic_assignment(
         _write_submission(
             submissions_root,
             submission,
+        )
+
+    if behavioral_results is not None:
+        (root / "test-results.csv").write_text(
+            behavioral_results.strip() + "\n",
+            encoding="utf-8",
         )
 
 
@@ -261,3 +272,59 @@ class Inventory {
         unrelated_b,
         lookalike,
     )
+
+
+def controlled_behavioral_results() -> str:
+    """Return deterministic imported behavior for the controlled cohort.
+
+    Correct behavior is intentionally common and therefore not pair evidence.
+    BASE and transformed variants share an incorrect output on EDGE_17.
+    LOOKALIKE passes that test despite its high normalized structural
+    similarity to BASE. The dataset is synthetic and exists to demonstrate
+    evidence-channel disagreement, not to estimate plagiarism accuracy.
+    """
+    submission_ids = (
+        "BASE",
+        "ID_RENAME",
+        "METHOD_REORDER",
+        "CLASS_RENAME",
+        "FILE_RENAME",
+        "DEAD_CODE",
+        "CLASS_SPLIT",
+        "UNRELATED_A",
+        "UNRELATED_B",
+        "LOOKALIKE",
+    )
+
+    related_ids = {
+        "BASE",
+        "ID_RENAME",
+        "METHOD_REORDER",
+        "CLASS_RENAME",
+        "FILE_RENAME",
+        "DEAD_CODE",
+        "CLASS_SPLIT",
+    }
+
+    lines = [
+        "submission,test,status,expected,actual",
+    ]
+
+    for submission_id in submission_ids:
+        lines.append(
+            f"{submission_id},BASIC_01,PASS,2,2"
+        )
+        lines.append(
+            f"{submission_id},BASIC_02,PASS,34,34"
+        )
+
+        if submission_id in related_ids:
+            lines.append(
+                f"{submission_id},EDGE_17,FAIL,289,288"
+            )
+        else:
+            lines.append(
+                f"{submission_id},EDGE_17,PASS,289,289"
+            )
+
+    return "\n".join(lines)

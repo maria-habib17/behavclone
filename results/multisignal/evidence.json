@@ -1,0 +1,305 @@
+{
+  "experiment": "controlled-multisignal-evidence",
+  "interpretation": "Evidence channels are reported separately. No combined plagiarism score or automated verdict is produced.",
+  "ngram_size": 4,
+  "pair_count": 9,
+  "pairs": [
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 10,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 1.3184537311185345,
+          "max_wrong_output_rarity": 1.3184537311185345,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 10,
+          "max_rarity": 1.2006706954621513,
+          "mean_rarity": 1.1655505235762091,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "BASE",
+        "right_submission_id": "ID_RENAME",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "ID_RENAME",
+      "transformation": "identifier_rename"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 10,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 1.3184537311185345,
+          "max_wrong_output_rarity": 1.3184537311185345,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 10,
+          "max_rarity": 1.2006706954621513,
+          "mean_rarity": 1.1655505235762091,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "BASE",
+        "right_submission_id": "METHOD_REORDER",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "METHOD_REORDER",
+      "transformation": "method_reorder"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 10,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 1.3184537311185345,
+          "max_wrong_output_rarity": 1.3184537311185345,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 10,
+          "max_rarity": 1.2006706954621513,
+          "mean_rarity": 1.1655505235762091,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "BASE",
+        "right_submission_id": "CLASS_RENAME",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "CLASS_RENAME",
+      "transformation": "class_rename"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 10,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 1.3184537311185345,
+          "max_wrong_output_rarity": 1.3184537311185345,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 10,
+          "max_rarity": 1.2006706954621513,
+          "mean_rarity": 1.1655505235762091,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "BASE",
+        "right_submission_id": "FILE_RENAME",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "FILE_RENAME",
+      "transformation": "file_rename"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 10,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 1.3184537311185345,
+          "max_wrong_output_rarity": 1.3184537311185345,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 10,
+          "max_rarity": 1.2006706954621513,
+          "mean_rarity": 1.1655505235762091,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "BASE",
+        "right_submission_id": "DEAD_CODE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8372093023255814,
+          "mean_raw_similarity": 0.8372093023255814,
+          "mean_structural_similarity": 0.8450704225352113,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "DEAD_CODE",
+      "transformation": "dead_code"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 10,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 1.3184537311185345,
+          "max_wrong_output_rarity": 1.3184537311185345,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 10,
+          "max_rarity": 1.2006706954621513,
+          "mean_rarity": 1.1655505235762091,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "BASE",
+        "right_submission_id": "CLASS_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "CLASS_SPLIT",
+      "transformation": "class_split"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 10,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 10,
+          "max_rarity": 0.0,
+          "mean_rarity": 0.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 0
+        },
+        "left_submission_id": "BASE",
+        "right_submission_id": "UNRELATED_A",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.5757575757575757,
+          "mean_raw_similarity": 0.3939393939393939,
+          "mean_structural_similarity": 0.5978336827393431,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "BASE",
+      "related": false,
+      "right_submission_id": "UNRELATED_A",
+      "transformation": "control"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 10,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 10,
+          "max_rarity": 1.095310179804325,
+          "mean_rarity": 1.095310179804325,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 8
+        },
+        "left_submission_id": "BASE",
+        "right_submission_id": "UNRELATED_B",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.6725806451612903,
+          "mean_raw_similarity": 0.4508064516129032,
+          "mean_structural_similarity": 0.6871794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "BASE",
+      "related": false,
+      "right_submission_id": "UNRELATED_B",
+      "transformation": "control"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 10,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 10,
+          "max_rarity": 1.2006706954621513,
+          "mean_rarity": 1.1655505235762091,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "BASE",
+        "right_submission_id": "LOOKALIKE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "BASE",
+      "related": false,
+      "right_submission_id": "LOOKALIKE",
+      "transformation": "control"
+    }
+  ]
+}
