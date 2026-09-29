@@ -1,0 +1,7 @@
+pydantic>=2.0
+PyYAML>=6.0
+
+[dev]
+pytest>=8.0
+pytest-cov>=5.0
+ruff>=0.6

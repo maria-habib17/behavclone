@@ -1,0 +1,6 @@
+assignment:
+  name: "Synthetic OOP Assignment"
+  language: "java"
+  submissions_directory: "submissions"
+  starter_directory: "starter"
+  test_results: "test-results.csv"
