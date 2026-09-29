@@ -1,0 +1,113 @@
+{
+  "behavclone_assignment_metric": "normalized",
+  "experiment": "controlled-behavclone-jplag-comparison",
+  "interpretation": "Side-by-side measurements on a small synthetic controlled corpus. These results do not establish general superiority or plagiarism-detection accuracy.",
+  "jplag": {
+    "frequency_analysis": false,
+    "jar_sha256": "5f2c21e8b88ed77134effcb3a5a3ab13d188f6a3e16d401387f7479e92db9aa2",
+    "normalized": false,
+    "version": "6.3.0"
+  },
+  "pair_count": 9,
+  "pairs": [
+    {
+      "behavclone_normalized_similarity": 1.0,
+      "behavclone_raw_similarity": 0.7777777777777778,
+      "behavclone_structural_similarity": 1.0,
+      "jplag_average_similarity": 1.0,
+      "jplag_max_similarity": 1.0,
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "ID_RENAME",
+      "transformation": "identifier_rename"
+    },
+    {
+      "behavclone_normalized_similarity": 1.0,
+      "behavclone_raw_similarity": 1.0,
+      "behavclone_structural_similarity": 1.0,
+      "jplag_average_similarity": 1.0,
+      "jplag_max_similarity": 1.0,
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "METHOD_REORDER",
+      "transformation": "method_reorder"
+    },
+    {
+      "behavclone_normalized_similarity": 1.0,
+      "behavclone_raw_similarity": 1.0,
+      "behavclone_structural_similarity": 1.0,
+      "jplag_average_similarity": 1.0,
+      "jplag_max_similarity": 1.0,
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "CLASS_RENAME",
+      "transformation": "class_rename"
+    },
+    {
+      "behavclone_normalized_similarity": 1.0,
+      "behavclone_raw_similarity": 1.0,
+      "behavclone_structural_similarity": 1.0,
+      "jplag_average_similarity": 1.0,
+      "jplag_max_similarity": 1.0,
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "FILE_RENAME",
+      "transformation": "file_rename"
+    },
+    {
+      "behavclone_normalized_similarity": 0.8372093023255814,
+      "behavclone_raw_similarity": 0.8372093023255814,
+      "behavclone_structural_similarity": 0.8450704225352113,
+      "jplag_average_similarity": 0.0,
+      "jplag_max_similarity": 0.0,
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "DEAD_CODE",
+      "transformation": "dead_code"
+    },
+    {
+      "behavclone_normalized_similarity": 1.0,
+      "behavclone_raw_similarity": 1.0,
+      "behavclone_structural_similarity": 1.0,
+      "jplag_average_similarity": 0.0,
+      "jplag_max_similarity": 0.0,
+      "left_submission_id": "BASE",
+      "related": true,
+      "right_submission_id": "CLASS_SPLIT",
+      "transformation": "class_split"
+    },
+    {
+      "behavclone_normalized_similarity": 0.5757575757575757,
+      "behavclone_raw_similarity": 0.3939393939393939,
+      "behavclone_structural_similarity": 0.5978336827393431,
+      "jplag_average_similarity": 0.0,
+      "jplag_max_similarity": 0.0,
+      "left_submission_id": "BASE",
+      "related": false,
+      "right_submission_id": "UNRELATED_A",
+      "transformation": "control"
+    },
+    {
+      "behavclone_normalized_similarity": 0.6725806451612903,
+      "behavclone_raw_similarity": 0.4508064516129032,
+      "behavclone_structural_similarity": 0.6871794871794872,
+      "jplag_average_similarity": 0.0,
+      "jplag_max_similarity": 0.0,
+      "left_submission_id": "BASE",
+      "related": false,
+      "right_submission_id": "UNRELATED_B",
+      "transformation": "control"
+    },
+    {
+      "behavclone_normalized_similarity": 1.0,
+      "behavclone_raw_similarity": 0.6666666666666666,
+      "behavclone_structural_similarity": 1.0,
+      "jplag_average_similarity": 1.0,
+      "jplag_max_similarity": 1.0,
+      "left_submission_id": "BASE",
+      "related": false,
+      "right_submission_id": "LOOKALIKE",
+      "transformation": "control"
+    }
+  ]
+}
