@@ -1,0 +1,19 @@
+{
+  "artifacts": {
+    "pairs.csv": "0d063996f6249ff5f8fcf28816fb4f7eb1f73d228d256cf6c0e7f04c37c323d4",
+    "pairs.json": "4f423eabfb7449c78c5853155b44b3eb46c94e5510bbbaf143b506e6bbaa2ee7"
+  },
+  "behavioral_evidence": "unavailable",
+  "cohort": "non-plagiarized",
+  "cohort_ngram_size": 4,
+  "combined_score": false,
+  "dataset": "IR-Plag",
+  "experiment": "authentic-false-positive",
+  "interpretation": "All pairs belong to the dataset-provided non-plagiarized cohort. Similarity and cohort evidence characterize surfacing and ambiguity; they do not infer plagiarism, authorship, or intent.",
+  "language": "java",
+  "matching_metric": "normalized",
+  "pair_count": 105,
+  "plagiarism_verdict": false,
+  "selected_case": "case-01",
+  "submission_count": 15
+}
