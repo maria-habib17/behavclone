@@ -1,0 +1,632 @@
+[
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A002"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A003"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A004"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A005"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A006"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A001",
+    "max_similarity": 0.0,
+    "right_submission_id": "A007"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A008"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A009"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A010"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A001",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A001",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A003"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A004"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A005"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A006"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A002",
+    "max_similarity": 0.0,
+    "right_submission_id": "A007"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A008"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A009"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A010"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A002",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A002",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A004"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A005"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A006"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A003",
+    "max_similarity": 0.0,
+    "right_submission_id": "A007"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A008"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A009"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A010"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A003",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A003",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A004",
+    "max_similarity": 1.0,
+    "right_submission_id": "A005"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A004",
+    "max_similarity": 1.0,
+    "right_submission_id": "A006"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A004",
+    "max_similarity": 0.0,
+    "right_submission_id": "A007"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A004",
+    "max_similarity": 1.0,
+    "right_submission_id": "A008"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A004",
+    "max_similarity": 1.0,
+    "right_submission_id": "A009"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A004",
+    "max_similarity": 1.0,
+    "right_submission_id": "A010"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A004",
+    "max_similarity": 1.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A004",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A004",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A004",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A004",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A005",
+    "max_similarity": 1.0,
+    "right_submission_id": "A006"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A005",
+    "max_similarity": 0.0,
+    "right_submission_id": "A007"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A005",
+    "max_similarity": 1.0,
+    "right_submission_id": "A008"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A005",
+    "max_similarity": 1.0,
+    "right_submission_id": "A009"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A005",
+    "max_similarity": 1.0,
+    "right_submission_id": "A010"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A005",
+    "max_similarity": 1.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A005",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A005",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A005",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A005",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A006",
+    "max_similarity": 0.0,
+    "right_submission_id": "A007"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A006",
+    "max_similarity": 1.0,
+    "right_submission_id": "A008"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A006",
+    "max_similarity": 1.0,
+    "right_submission_id": "A009"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A006",
+    "max_similarity": 1.0,
+    "right_submission_id": "A010"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A006",
+    "max_similarity": 1.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A006",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A006",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A006",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A006",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A007",
+    "max_similarity": 0.0,
+    "right_submission_id": "A008"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A007",
+    "max_similarity": 0.0,
+    "right_submission_id": "A009"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A007",
+    "max_similarity": 0.0,
+    "right_submission_id": "A010"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A007",
+    "max_similarity": 0.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A007",
+    "max_similarity": 0.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A007",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A007",
+    "max_similarity": 0.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A007",
+    "max_similarity": 0.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A008",
+    "max_similarity": 1.0,
+    "right_submission_id": "A009"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A008",
+    "max_similarity": 1.0,
+    "right_submission_id": "A010"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A008",
+    "max_similarity": 1.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A008",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A008",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A008",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A008",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A009",
+    "max_similarity": 1.0,
+    "right_submission_id": "A010"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A009",
+    "max_similarity": 1.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A009",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A009",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A009",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A009",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A010",
+    "max_similarity": 1.0,
+    "right_submission_id": "A011"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A010",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A010",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A010",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A010",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A011",
+    "max_similarity": 1.0,
+    "right_submission_id": "A012"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A011",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A011",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A011",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A012",
+    "max_similarity": 0.0,
+    "right_submission_id": "A013"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A012",
+    "max_similarity": 1.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 1.0,
+    "left_submission_id": "A012",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A013",
+    "max_similarity": 0.0,
+    "right_submission_id": "A014"
+  },
+  {
+    "average_similarity": 0.0,
+    "left_submission_id": "A013",
+    "max_similarity": 0.0,
+    "right_submission_id": "A015"
+  },
+  {
+    "average_similarity": 0.9523809523809523,
+    "left_submission_id": "A014",
+    "max_similarity": 1.0,
+    "right_submission_id": "A015"
+  }
+]

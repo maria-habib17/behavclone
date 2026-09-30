@@ -1,0 +1,31 @@
+{
+  "artifact_sha256": {
+    "pairs.csv": "9f34dd1d16afc0268e1b0e1d8bc969d3db24d38040d12249feba5676155ff1dd",
+    "pairs.json": "60f454dbee02b4ab341793073701e03361bb6fb7de37efd9c0a00126dd937c23"
+  },
+  "behavioral_evidence": "unavailable",
+  "case": "case-01",
+  "cohort": "non-plagiarized",
+  "combined_score": false,
+  "dataset": "IR-Plag",
+  "dataset_label": "dataset-provided non-plagiarized",
+  "experiment": "authentic-false-positive-jplag",
+  "frequency_analysis": false,
+  "interpretation_boundary": "Dataset-provided labels are used for authentic false-positive and similarity-ambiguity analysis; they do not establish author intent or prove absence of copying.",
+  "jplag": {
+    "frequency_analysis": false,
+    "jar_sha256": "5f2c21e8b88ed77134effcb3a5a3ab13d188f6a3e16d401387f7479e92db9aa2",
+    "normalized": false,
+    "version": "6.3.0"
+  },
+  "language": "Java",
+  "normalized": false,
+  "pair_count": 105,
+  "plagiarism_verdict": false,
+  "similarity_fields": [
+    "averageSimilarity",
+    "maxSimilarity"
+  ],
+  "similarity_threshold": 0.0,
+  "submission_count": 15
+}
