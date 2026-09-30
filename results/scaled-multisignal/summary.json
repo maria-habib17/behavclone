@@ -1,0 +1,43 @@
+{
+  "control_pair_count": 96,
+  "control_summary": {
+    "behavior_identical_wrong_output_pairs": 0,
+    "behavior_shared_failure_pairs": 0,
+    "normalized_collision_pairs": 48,
+    "normalized_collision_pairs_with_identical_wrong_output": 0,
+    "normalized_collision_pairs_with_shared_failure": 0,
+    "pair_count": 96
+  },
+  "experiment": "scaled-controlled-multisignal-evidence",
+  "family_count": 4,
+  "interpretation": "Controlled synthetic evidence-channel analysis. Structural, cohort-relative, and behavioral evidence are reported separately. Behavioral observations were predeclared before pairwise measurement and do not force every provenance-related pair to share a failure. Results characterize this synthetic cohort only and do not establish plagiarism-detection accuracy, causal provenance, or general superiority.",
+  "pair_count": 120,
+  "protocol": {
+    "behavioral_fields": [
+      "shared_failure_count",
+      "identical_wrong_output_count",
+      "max_failure_rarity",
+      "max_wrong_output_rarity"
+    ],
+    "cohort_fields": [
+      "shared_feature_count",
+      "pair_specific_feature_count",
+      "max_rarity",
+      "mean_rarity"
+    ],
+    "interpretation": "Structural, cohort-relative, and behavioral evidence are reported as separate channels. The primary label view treats within-family pairs as related and cross-family pairs as controls. Normalized and structural similarity collisions are analyzed without introducing a combined score, plagiarism threshold, automated verdict, or post-hoc relabeling.",
+    "label_view": "provenance_families",
+    "ngram_size": 4,
+    "structural_collision_value": 1.0
+  },
+  "related_pair_count": 24,
+  "related_summary": {
+    "behavior_identical_wrong_output_pairs": 4,
+    "behavior_shared_failure_pairs": 8,
+    "normalized_collision_pairs": 24,
+    "normalized_collision_pairs_with_identical_wrong_output": 4,
+    "normalized_collision_pairs_with_shared_failure": 8,
+    "pair_count": 24
+  },
+  "submission_count": 16
+}

@@ -1,0 +1,3965 @@
+{
+  "experiment": "scaled-controlled-multisignal-evidence",
+  "pairs": [
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 2.4469189829363254,
+          "max_wrong_output_rarity": 2.734601055388106,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "PRICE_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": true,
+      "right_submission_id": "PRICE_RENAMED",
+      "transformation": "identifier_rename"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 2.4469189829363254,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "PRICE_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": true,
+      "right_submission_id": "PRICE_REORDERED",
+      "transformation": "method_reorder"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "PRICE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": true,
+      "right_submission_id": "PRICE_SPLIT",
+      "transformation": "class_split"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "SCORE_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "SCORE_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "SCORE_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "SCORE_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "SCORE_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "SCORE_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "SCORE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "SCORE_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "STOCK_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "STOCK_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "STOCK_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "STOCK_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_BASE",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 2.4469189829363254,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "PRICE_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": true,
+      "right_submission_id": "PRICE_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "PRICE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": true,
+      "right_submission_id": "PRICE_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "SCORE_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "SCORE_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "SCORE_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "SCORE_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "SCORE_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "SCORE_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "SCORE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "SCORE_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "STOCK_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "STOCK_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "STOCK_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "STOCK_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_RENAMED",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "PRICE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": true,
+      "right_submission_id": "PRICE_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "SCORE_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "SCORE_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "SCORE_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "SCORE_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "SCORE_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "SCORE_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "SCORE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "SCORE_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "STOCK_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "STOCK_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "STOCK_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "STOCK_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_REORDERED",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "SCORE_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "SCORE_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "SCORE_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "SCORE_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "SCORE_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "SCORE_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "SCORE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "SCORE_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "STOCK_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "STOCK_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "STOCK_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "STOCK_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "PRICE_SPLIT",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "PRICE_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "SCORE_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": true,
+      "right_submission_id": "SCORE_RENAMED",
+      "transformation": "identifier_rename"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "SCORE_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": true,
+      "right_submission_id": "SCORE_REORDERED",
+      "transformation": "method_reorder"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 2.734601055388106,
+          "max_wrong_output_rarity": 2.734601055388106,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "SCORE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": true,
+      "right_submission_id": "SCORE_SPLIT",
+      "transformation": "class_split"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "STOCK_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": false,
+      "right_submission_id": "STOCK_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "STOCK_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": false,
+      "right_submission_id": "STOCK_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": false,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": false,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_BASE",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "SCORE_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": true,
+      "right_submission_id": "SCORE_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "SCORE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": true,
+      "right_submission_id": "SCORE_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "STOCK_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": false,
+      "right_submission_id": "STOCK_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "STOCK_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": false,
+      "right_submission_id": "STOCK_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": false,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": false,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_RENAMED",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_REORDERED",
+        "right_submission_id": "SCORE_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_REORDERED",
+      "related": true,
+      "right_submission_id": "SCORE_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_REORDERED",
+        "right_submission_id": "STOCK_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_REORDERED",
+      "related": false,
+      "right_submission_id": "STOCK_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_REORDERED",
+        "right_submission_id": "STOCK_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_REORDERED",
+      "related": false,
+      "right_submission_id": "STOCK_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_REORDERED",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_REORDERED",
+      "related": false,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_REORDERED",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_REORDERED",
+      "related": false,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_REORDERED",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_REORDERED",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_REORDERED",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_REORDERED",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_SPLIT",
+        "right_submission_id": "STOCK_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_SPLIT",
+      "related": false,
+      "right_submission_id": "STOCK_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_SPLIT",
+        "right_submission_id": "STOCK_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_SPLIT",
+      "related": false,
+      "right_submission_id": "STOCK_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_SPLIT",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_SPLIT",
+      "related": false,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "SCORE_SPLIT",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.6666666666666666,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_SPLIT",
+      "related": false,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_SPLIT",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_SPLIT",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_SPLIT",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "SCORE_SPLIT",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "SCORE_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "STOCK_BASE",
+        "right_submission_id": "STOCK_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_BASE",
+      "related": true,
+      "right_submission_id": "STOCK_RENAMED",
+      "transformation": "identifier_rename"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "STOCK_BASE",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_BASE",
+      "related": true,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": "method_reorder"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "STOCK_BASE",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_BASE",
+      "related": true,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": "class_split"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_BASE",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_BASE",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_BASE",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_BASE",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_BASE",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 2.734601055388106,
+          "max_wrong_output_rarity": 2.734601055388106,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "STOCK_RENAMED",
+        "right_submission_id": "STOCK_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_RENAMED",
+      "related": true,
+      "right_submission_id": "STOCK_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "STOCK_RENAMED",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.7777777777777778,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_RENAMED",
+      "related": true,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_RENAMED",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_RENAMED",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_RENAMED",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_RENAMED",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_RENAMED",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.2682639865946794,
+          "mean_rarity": 1.0715370630919143,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 30
+        },
+        "left_submission_id": "STOCK_REORDERED",
+        "right_submission_id": "STOCK_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_REORDERED",
+      "related": true,
+      "right_submission_id": "STOCK_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_REORDERED",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_REORDERED",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_REORDERED",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_REORDERED",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_REORDERED",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_SPLIT",
+        "right_submission_id": "TEMP_BASE",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_BASE",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_SPLIT",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_SPLIT",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 1.0,
+          "mean_rarity": 1.0,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 16
+        },
+        "left_submission_id": "STOCK_SPLIT",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 0.8222222222222222,
+          "mean_raw_similarity": 0.5305555555555556,
+          "mean_structural_similarity": 0.8371794871794872,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "STOCK_SPLIT",
+      "related": false,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 1,
+          "max_failure_rarity": 2.4469189829363254,
+          "max_wrong_output_rarity": 2.734601055388106,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 2.2237754316221157,
+          "mean_rarity": 1.6478811108587672,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 34
+        },
+        "left_submission_id": "TEMP_BASE",
+        "right_submission_id": "TEMP_RENAMED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.8207070707070707,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "TEMP_BASE",
+      "related": true,
+      "right_submission_id": "TEMP_RENAMED",
+      "transformation": "identifier_rename"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 2.2237754316221157,
+          "mean_rarity": 1.6478811108587672,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 34
+        },
+        "left_submission_id": "TEMP_BASE",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "TEMP_BASE",
+      "related": true,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": "method_reorder"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 2.4469189829363254,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 2.2237754316221157,
+          "mean_rarity": 1.6478811108587672,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 34
+        },
+        "left_submission_id": "TEMP_BASE",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "TEMP_BASE",
+      "related": true,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": "class_split"
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 2.2237754316221157,
+          "mean_rarity": 1.6478811108587672,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 34
+        },
+        "left_submission_id": "TEMP_RENAMED",
+        "right_submission_id": "TEMP_REORDERED",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.8207070707070707,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "TEMP_RENAMED",
+      "related": true,
+      "right_submission_id": "TEMP_REORDERED",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 2.4469189829363254,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 1
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 2.2237754316221157,
+          "mean_rarity": 1.6478811108587672,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 34
+        },
+        "left_submission_id": "TEMP_RENAMED",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 0.8207070707070707,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "TEMP_RENAMED",
+      "related": true,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    },
+    {
+      "evidence": {
+        "behavioral": {
+          "cohort_size": 16,
+          "identical_wrong_output_count": 0,
+          "max_failure_rarity": 0.0,
+          "max_wrong_output_rarity": 0.0,
+          "shared_failure_count": 0
+        },
+        "cohort": {
+          "cohort_size": 16,
+          "max_rarity": 2.2237754316221157,
+          "mean_rarity": 1.6478811108587672,
+          "ngram_size": 4,
+          "pair_specific_feature_count": 0,
+          "shared_feature_count": 34
+        },
+        "left_submission_id": "TEMP_REORDERED",
+        "right_submission_id": "TEMP_SPLIT",
+        "structural": {
+          "left_coverage": 1.0,
+          "matched_count": 2,
+          "mean_normalized_similarity": 1.0,
+          "mean_raw_similarity": 1.0,
+          "mean_structural_similarity": 1.0,
+          "right_coverage": 1.0
+        }
+      },
+      "left_submission_id": "TEMP_REORDERED",
+      "related": true,
+      "right_submission_id": "TEMP_SPLIT",
+      "transformation": null
+    }
+  ]
+}
