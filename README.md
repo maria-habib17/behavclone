@@ -2,742 +2,373 @@
 
 > **Evidence-oriented similarity analysis for architecture-flexible programming assignments.**
 
-BehavClone is an experimental research-engineering project for analyzing similarities between programming-assignment submissions when students are free to choose different files, classes, method names, and method orderings.
+BehavClone is a research-engineering prototype for investigating similarity between programming-assignment submissions when students may choose different files, classes, method names, identifiers, and program organization.
 
-Many source-similarity workflows become less informative when equivalent functionality is organized differently across submissions. BehavClone explores a different approach: treat the **complete submission as the unit of analysis**, extract structural fragments, compare candidate fragments across submissions, and find a global correspondence between them.
+The central design decision is simple: **compare complete submissions, not corresponding filenames.** BehavClone extracts Java methods and constructors as fragments, builds multiple representations, compares candidate fragments across complete submissions, and computes a global one-to-one correspondence.
 
-BehavClone does **not** determine whether plagiarism occurred.
-
-Its purpose is to surface interpretable similarity evidence for human review.
+Structural similarity, cohort-relative context, and imported behavioral evidence remain **separate evidence channels for human review**. BehavClone does **not** decide whether plagiarism occurred.
 
 ---
 
-## Research Question
+## Why BehavClone?
 
-> **Can suspiciously similar solutions be surfaced when students are free to use different files, classes, methods, and program structures, but must implement the same specified behavior?**
-
-The project investigates four initial research questions:
-
-1. How robust is fragment matching to identifier, file, class, and method transformations?
-2. Can cohort-relative evidence distinguish common assignment patterns from unusually shared structure?
-3. Can rare shared incorrect behavior provide useful evidence beyond source similarity?
-4. How often are independently written solutions surfaced as highly similar?
-
----
-
-## Motivation
-
-Programming assignments often specify required behavior while still allowing students freedom in software design.
-
-Two students may implement equivalent functionality using:
-
-- different filenames,
-- different class names,
-- different method names,
-- different variable names,
-- different method orderings, and
-- different class or file organization.
-
-A comparison system should therefore not assume that:
-
-```text
-Submission A                    Submission B
-
-Calculator.java      <------>   Calculator.java
-calculate()          <------>   calculate()
-method #1            <------>   method #1
-```
-
-is the only meaningful correspondence.
-
-BehavClone instead investigates correspondence across the **whole submission**.
-
-For example:
+Programming assignments often specify required behavior while leaving architecture open. Related implementations can therefore use different filenames, classes, methods, identifiers, method orderings, and file organization.
 
 ```text
 Submission A                    Submission B
 
 Calculator.java                 PricingEngine.java
-    calculate()  ------------>      compute()
+    calculate()  ----------->       compute()
 
 Validator.java                  Rules.java
-    valid()      ------------>      check()
+    valid()      ----------->       check()
 
 Receipt.java                    OutputEngine.java
-    printReceipt() ----------->      output()
+    printReceipt() ----------->     output()
 ```
 
-The correspondence is based on fragment evidence rather than filenames, class names, or source position.
+BehavClone investigates these correspondences across the **whole submission** rather than requiring matching filenames, class names, method names, or source positions.
+
+## Research questions
+
+1. **Architecture flexibility:** how robust is whole-submission fragment matching to identifier, method, class, filename, ordering, and organization changes?
+2. **Cohort context:** can common assignment patterns be distinguished from unusually shared structure?
+3. **Incorrect behavior:** can shared failures or identical wrong outputs add useful evidence when structural similarity is ambiguous?
+4. **False-positive pressure:** how often can independently labelled or control solutions still appear highly similar?
+
+These are evidence questions, not automated misconduct decisions.
 
 ---
 
-## Example
+## Evidence model
 
-Consider these two Java methods.
-
-### Submission A
-
-```java
-public class Calculator {
-
-    public int calculate(int price, int discount) {
-        int result = price - discount;
-
-        if (result < 0) {
-            return 0;
-        }
-
-        return result;
-    }
-}
-```
-
-### Submission B
-
-```java
-public class PricingEngine {
-
-    public int compute(int amount, int reduction) {
-        int finalValue = amount - reduction;
-
-        if (finalValue < 0) {
-            return 0;
-        }
-
-        return finalValue;
-    }
-}
-```
-
-Several surface features have changed:
+BehavClone deliberately avoids collapsing its signals into one opaque plagiarism score.
 
 ```text
-Calculator      -> PricingEngine
-calculate       -> compute
-price           -> amount
-discount        -> reduction
-result          -> finalValue
+                 Submission pair
+                       |
+        +--------------+--------------+
+        |              |              |
+        v              v              v
+   Structural        Cohort        Behavioral
+    evidence         context         evidence
+        |              |              |
+ raw similarity   shared features  shared failures
+ normalized sim.  pair-specific    identical wrong outputs
+ structural sim.  features         failure rarity
+ fragment matches rarity           output rarity
+ coverage
+        |              |              |
+        +--------------+--------------+
+                       |
+                       v
+                Human interpretation
 ```
 
-The implementation structure, however, remains closely related.
-
-The current BehavClone prototype represents this relationship using multiple evidence channels rather than relying on one raw-text score.
+There is currently **no combined plagiarism score, universal plagiarism threshold, or automatic verdict**.
 
 ---
 
-## Current Capabilities
-
-The current prototype implements:
-
-- recursive Java source discovery,
-- whole-submission ingestion,
-- Tree-sitter Java parsing,
-- method extraction,
-- constructor extraction,
-- raw token representations,
-- normalized token representations,
-- structural syntax representations,
-- LCS-based sequence similarity,
-- all-pairs fragment comparison,
-- maximum-weight one-to-one fragment assignment,
-- architecture-flexible submission comparison,
-- method-permutation resistance in synthetic tests,
-- unmatched-fragment coverage reporting, and
-- separate raw, normalized, and structural similarity evidence.
-
-The current repository passes:
+## Architecture
 
 ```text
-39 tests
-Ruff: all checks passed
+Assignment
+    |
+    v
+Submission discovery
+    |
+    v
+Recursive Java discovery
+    |
+    v
+Tree-sitter parsing
+    |
+    v
+Method / constructor fragments
+    |
+    +----------------+----------------+
+    |                |                |
+    v                v                v
+ Raw tokens     Normalized tokens   Structural syntax
+    |                |                |
+    +----------------+----------------+
+                     |
+                     v
+          Pairwise fragment similarity
+                     |
+                     v
+       Maximum-weight one-to-one assignment
+                     |
+                     v
+          Submission-level evidence
+                     |
+          +----------+----------+
+          |                     |
+          v                     v
+   Cohort context       Imported test outcomes
 ```
+
+The current exact assignment solver uses dynamic programming and is a research baseline rather than the final scalability design. See [`docs/architecture.md`](docs/architecture.md) for component boundaries and design rationale.
+
+### Fragment representations
+
+A fragment is currently one complete Java `method_declaration` or `constructor_declaration` identified with Tree-sitter.
+
+**Raw tokens** preserve concrete lexical information, so identifier renaming affects them. **Normalized tokens** abstract identifiers and literals while retaining relevant Java syntax, keywords, punctuation, and operators. **Structural tokens** capture syntax-tree structure with reduced dependence on concrete identifier spelling.
+
+Keeping these representations separate makes their trade-offs measurable.
+
+### Similarity
+
+The current fragment baseline uses symmetric Longest Common Subsequence similarity:
+
+```text
+                 2 * LCS(A, B)
+similarity = ---------------------
+                  |A| + |B|
+```
+
+The value lies between `0` and `1`. A high value means the selected representations are similar; it is **not** a probability that plagiarism occurred.
+
+### Permutation-resistant matching
+
+For fragments `A = {a1, ..., an}` and `B = {b1, ..., bm}`, BehavClone compares candidate fragments across the submissions and computes a maximum-weight one-to-one assignment rather than pairing fragments by filename or position.
+
+```text
+          b1      b2      b3
+
+a1       0.31    1.00    0.42
+a2       0.27    0.39    1.00
+a3       1.00    0.33    0.29
+```
+
+This yields `a1 -> b2`, `a2 -> b3`, and `a3 -> b1`, providing resistance to simple method permutation and allowing cross-file correspondence.
 
 ---
 
-## Current Analysis Pipeline
+## Starter-code exclusion
 
-```text
-                    +----------------------+
-                    |      Assignment      |
-                    +----------+-----------+
-                               |
-                               v
-                    +----------------------+
-                    | Submission Discovery |
-                    +----------+-----------+
-                               |
-                               v
-                    +----------------------+
-                    | Java File Discovery  |
-                    +----------+-----------+
-                               |
-                               v
-                    +----------------------+
-                    |  Tree-sitter Parser  |
-                    +----------+-----------+
-                               |
-                               v
-                    +----------------------+
-                    | Fragment Extraction  |
-                    | methods/constructors |
-                    +----------+-----------+
-                               |
-                               v
-             +-----------------+-----------------+
-             |                 |                 |
-             v                 v                 v
-       +-----------+     +-----------+     +-----------+
-       |    Raw    |     |Normalized |     |Structural |
-       |  Tokens   |     |  Tokens   |     |  Syntax   |
-       +-----+-----+     +-----+-----+     +-----+-----+
-             |                 |                 |
-             +-----------------+-----------------+
-                               |
-                               v
-                    +----------------------+
-                    | Pairwise Fragment    |
-                    | Similarity Evidence  |
-                    +----------+-----------+
-                               |
-                               v
-                    +----------------------+
-                    | Maximum-Weight       |
-                    | 1-to-1 Assignment    |
-                    +----------+-----------+
-                               |
-                               v
-                    +----------------------+
-                    | Submission-Level     |
-                    | Structural Evidence  |
-                    +----------------------+
-```
+Instructor-provided starter material is a major confounder. BehavClone implements conservative starter-code exclusion using signatures that normalize identifiers while preserving literals, operators, keywords, and punctuation.
 
-Future evidence layers will extend this pipeline with starter-code exclusion, cohort-relative rarity, and behavioral evidence.
+Exact or identifier-renamed starter fragments can therefore be excluded, while fragments with changed literals or operators remain available for analysis.
 
 ---
 
-## What Is a Fragment?
+## Cohort-relative evidence
 
-The definition of a fragment is explicit.
+A feature appearing in nearly every submission should not necessarily carry the same evidential weight as an unusual shared feature. BehavClone computes submission-level document frequency and uses:
 
-In the current prototype, a structural fragment is one complete Java:
+```text
+R(g) = ln((N + 1) / (DF(g) + 1)) + 1
+```
 
-- `method_declaration`, or
-- `constructor_declaration`
+where `N` is the number of submissions and `DF(g)` is the number containing feature `g`.
 
-identified by Tree-sitter.
-
-BehavClone therefore does **not** currently define fragments as arbitrary token subsequences or arbitrary AST subtrees.
-
-Alternative granularities, such as blocks and AST subtrees, can later be evaluated experimentally rather than being hidden implementation assumptions.
+Rarity remains a separate evidence channel. The experiments also preserve negative findings: pair-specific rarity was weak in the authentic cohort and did not discriminate the maximally similar BehavClone pairs.
 
 ---
 
-## Multiple Representations
+## Behavioral evidence
 
-BehavClone deliberately keeps different representations separate.
-
-### 1. Raw Tokens
-
-Raw tokens preserve concrete source tokens.
-
-Identifier renaming therefore affects this representation.
-
-Conceptually:
+Correct behavior is expected in a programming assignment and is not treated as suspicious by itself. BehavClone instead imports externally obtained test results and can represent shared failures, identical incorrect outputs, failure rarity, and incorrect-output rarity.
 
 ```text
-calculate price discount result
+Expected: 100
+
+Submission A: 99
+Submission B: 99
 ```
 
-and:
-
-```text
-compute amount reduction finalValue
-```
-
-remain different.
+An unusual shared incorrect outcome may provide complementary evidence for review, but it remains evidence rather than proof of copying. The current prototype **imports** test outcomes; it does not execute untrusted student programs.
 
 ---
 
-### 2. Normalized Tokens
+# Evaluation
 
-Identifiers and literal values are abstracted while relevant Java syntax, keywords, and operators remain available.
+The repository contains controlled, scaled, baseline, multi-signal, and authentic evaluation artifacts under [`results/`](results/). Full methodology, negative findings, and validity threats are documented in [`docs/evaluation.md`](docs/evaluation.md).
 
-For example, renamed identifiers can map toward a representation such as:
+## Controlled transformation benchmark
+
+The controlled benchmark includes identifier renaming, method reordering, class renaming, filename changes, dead-code insertion, class splitting, unrelated controls, and an intentionally difficult structural lookalike.
+
+| Transformation | BehavClone normalized similarity |
+|---|---:|
+| Identifier rename | 1.000 |
+| Method reorder | 1.000 |
+| Class rename | 1.000 |
+| Filename rename | 1.000 |
+| Class split | 1.000 |
+| Dead-code insertion | ~0.837 |
+
+The deliberately unrelated lookalike also reached normalized and structural similarity `1.0`. That negative result matters: transformation robustness can reduce discriminability. The benchmark is therefore not presented as a plagiarism-accuracy result.
+
+## Scaled false-positive pressure
+
+A larger controlled experiment contains **16 submissions**, **4 provenance families**, and **120 unordered pairs**: 24 within-family related pairs and 96 cross-family controls.
+
+All 24 related pairs reached normalized similarity `1.0`, but **48 of 96 cross-family controls also reached `1.0`**. On this synthetic cohort, normalization and structural abstraction increased transformation invariance while also creating substantial similarity collisions.
+
+The raw representation separated the provenance families in this particular fixture, but that does not establish that raw comparison is universally superior.
+
+## Multi-signal controlled evidence
+
+Among the 24 related pairs:
 
 ```text
-<ID> <ID> <ID> <ID>
+normalized similarity == 1.0       24 / 24
+shared-failure evidence present      8 / 24
+identical wrong-output evidence      4 / 24
 ```
 
-while operations such as:
+Among the 96 cross-family controls:
 
 ```text
-+
--
-*
-/
-<
->
+normalized similarity == 1.0       48 / 96
+shared-failure evidence present      0 / 96
+identical wrong-output evidence      0 / 96
 ```
 
-remain distinguishable.
+In this controlled fixture, behavioral evidence supplied additional discriminating information **when present**. It did not solve the structural ambiguity problem: 16 of the 24 related pairs had no shared-failure evidence.
 
-This reduces sensitivity to superficial renaming without intentionally erasing all implementation information.
+These behavioral observations are controlled imported outcomes, not executions of one common real assignment test suite.
+
+## Authentic external evaluation
+
+BehavClone was also evaluated on a frozen external Java cohort from the IR-Plag dataset: **15 dataset-labelled non-plagiarized submissions**, **105 unordered pairs**, one Java source file per submission, and one extracted fragment per submission.
+
+This experiment examines false-positive / similarity ambiguity pressure. The dataset label does not establish author intent.
+
+### BehavClone
+
+For normalized similarity across the 105 pairs:
+
+| Statistic | Value |
+|---|---:|
+| Minimum | 0.557692 |
+| Median | 1.000000 |
+| Mean | 0.916794 |
+| Maximum | 1.000000 |
+| Exact `1.0` pairs | 55 / 105 |
+
+### JPlag 6.3.0
+
+**JPlag is the principal established baseline used by this project.** For JPlag average similarity on the same cohort:
+
+| Statistic | Value |
+|---|---:|
+| Minimum | 0.000000 |
+| Median | 1.000000 |
+| Mean | 0.737415 |
+| Maximum | 1.000000 |
+| Exact `1.0` pairs | 66 / 105 |
+| Zero-similarity pairs | 27 / 105 |
+
+JPlag maximum similarity reached `1.0` for 78 of 105 pairs. Tie-aware analysis found high overall rank association between BehavClone normalized similarity and JPlag average similarity (`Spearman rho ≈ 0.928`), while the systems still disagreed operationally on some pairs.
+
+The scores are not mathematically equivalent, and neither is interpreted as a plagiarism probability.
+
+### Important authentic-evaluation limitation
+
+Every submission in the frozen authentic cohort produced exactly **one fragment** under the current extraction pipeline. The authentic experiment therefore does **not** validate BehavClone's multi-fragment architecture-flexible matching mechanism; that mechanism is currently supported by controlled experiments.
+
+The authentic cohort also has no independently established common behavioral observations in this project, so behavioral evidence is unavailable for that experiment.
 
 ---
 
-### 3. Structural Representation
+## BehavClone and JPlag
 
-The structural representation captures syntax-tree structure while retaining relevant distinctions such as operators.
+Modern JPlag supports submission-level comparison across multiple files, base-code handling, normalization, configurable matching, CSV export, and frequency-aware analysis. BehavClone should therefore **not** be described as fixing a simplistic limitation where JPlag can only compare matching filenames or classes.
 
-This provides a representation less dependent on concrete identifier spelling.
+The current research instead investigates an evidence architecture combining complete-submission fragment correspondence, global one-to-one assignment, separately inspectable structural representations, cohort-relative context, shared-failure evidence, and identical incorrect-output evidence.
 
----
+The controlled benchmark contains cases where the systems behave differently. For example, BehavClone normalized matching retained full similarity for the small controlled class-split fixture while the evaluated JPlag configurations did not. This is fixture-specific and is **not** a claim of general superiority.
 
-## Why Keep the Signals Separate?
-
-BehavClone does not currently collapse the representations into an arbitrary weighted "plagiarism score."
-
-Instead, evidence such as:
-
-```text
-raw similarity
-normalized similarity
-structural similarity
-fragment coverage
-```
-
-can remain separately inspectable.
-
-This supports later ablation experiments and makes it possible to ask which representation actually contributes useful information.
+See [`docs/related-work.md`](docs/related-work.md) for the JPlag-centered contribution boundary and prior-work discussion.
 
 ---
 
-## Similarity
+## What the current evidence supports
 
-The current baseline uses **Longest Common Subsequence (LCS)** based sequence similarity.
+The current experiments support bounded conclusions: whole-submission fragment assignment tolerates several controlled naming, ordering, and organization transformations; normalization can improve transformation invariance while increasing false-positive pressure; cohort rarity exposes feature commonness but is not consistently discriminative; controlled shared incorrect behavior can add information when present; and dataset-labelled non-plagiarized authentic programs can still produce high similarity under both BehavClone and JPlag.
 
-For token sequences `A` and `B`, the current normalized sequence similarity is:
+## What the evidence does not support
 
-```text
-                  2 * LCS(A, B)
-similarity = -------------------------
-                |A| + |B|
-```
+The current experiments do **not** establish plagiarism-detection accuracy, author intent, a universal similarity threshold, a universal false-positive rate, superiority over JPlag, scientific novelty of every component, authentic behavioral effectiveness, or authentic validation of multi-fragment architecture flexibility.
 
-The measure is symmetric and bounded between `0` and `1`.
-
-A high value is similarity evidence.
-
-It is **not** interpreted as a probability that plagiarism occurred.
+These boundaries are part of the research result.
 
 ---
 
-## Architecture-Flexible Matching
+# Reproducibility
 
-Suppose one submission contains:
-
-```text
-A = {a1, a2, ..., an}
-```
-
-and another contains:
+Protocols, experiment runners, result artifacts, and regression tests are kept together.
 
 ```text
-B = {b1, b2, ..., bm}
+results/
+|-- controlled/
+|-- scaled/
+|-- multisignal/
+|-- scaled-multisignal/
+|-- baselines/
+|   |-- jplag/
+|   `-- jplag-configurations/
+`-- authentic/
+    |-- behavclone/
+    |-- jplag/
+    `-- analysis/
 ```
 
-BehavClone compares candidate fragments across the two submissions rather than pairing fragments by filename or position.
-
-This produces a fragment-similarity matrix:
-
-```text
-                    Submission B
-
-                  b1      b2      b3
-
-Submission   a1   s11     s12     s13
-A            a2   s21     s22     s23
-             a3   s31     s32     s33
-```
-
-The current research baseline then computes a **maximum-weight one-to-one assignment**.
-
-For example, a matrix such as:
-
-```text
-0.31    1.00    0.42
-0.27    0.39    1.00
-1.00    0.33    0.29
-```
-
-produces the correspondence:
-
-```text
-a1 -> b2
-a2 -> b3
-a3 -> b1
-```
-
-rather than assuming:
-
-```text
-a1 -> b1
-a2 -> b2
-a3 -> b3
-```
-
-This makes the baseline resistant to simple method permutation.
-
----
-
-## Why Global Assignment?
-
-Greedy matching can select a locally attractive fragment pair that prevents a better overall correspondence.
-
-BehavClone therefore currently uses exact maximum-weight assignment via dynamic programming.
-
-This gives the optimal one-to-one assignment for the current similarity matrix.
-
-The implementation is intentionally a research baseline: its complexity grows exponentially with the candidate-column count.
-
-A polynomial-time assignment algorithm, such as a Hungarian-style implementation, is a future scalability improvement.
-
----
-
-## Coverage Matters
-
-A pair of submissions should not look completely matched simply because one similar method exists.
-
-BehavClone therefore exposes fragment coverage.
-
-For example, if:
-
-```text
-Submission A: 1 fragment
-Submission B: 2 fragments
-Matched:      1 fragment
-```
-
-then:
-
-```text
-left coverage  = 1.0
-right coverage = 0.5
-```
-
-The unmatched fragment remains visible rather than disappearing into a single aggregate score.
-
----
-
-## Tested Transformations
-
-The current synthetic tests exercise cases including:
-
-```text
-identifier renaming
-method renaming
-class renaming
-filename changes
-method permutation
-different file organization
-extra unmatched fragments
-distractor fragments
-```
-
-An adversarial integration test also verifies that global assignment can prefer the intended overall correspondence when an additional distractor fragment is present.
-
-These are controlled synthetic tests.
-
-They should **not** be interpreted as evidence of real-world plagiarism-detection accuracy.
-
----
-
-## Evidence, Not Verdicts
-
-BehavClone follows a deliberately conservative interpretation model.
-
-The system is intended to produce evidence such as:
-
-```text
-Pair: S001 <-> S002
-
-Structural evidence
--------------------
-Matched fragments:        ...
-Normalized similarity:    ...
-Structural similarity:    ...
-Coverage:                 ...
-
-Behavioral evidence
--------------------
-Shared rare failures:     ...
-Identical wrong outputs:  ...
-
-Cohort context
--------------------
-Pattern frequency:        ...
-Rarity evidence:          ...
-```
-
-The final interpretation remains a human responsibility.
-
-BehavClone does not automatically output:
-
-```text
-PLAGIARISM = TRUE
-```
-
-and a similarity value is not presented as a plagiarism probability.
-
----
-
-## Correct Behavior Is Not Suspicious by Itself
-
-Programming assignments explicitly require students to produce the same correct behavior.
-
-If two correct submissions both produce:
-
-```text
-expected: 80
-actual:   80
-```
-
-that agreement is expected.
-
-Therefore, future behavioral analysis will not treat ordinary shared correct output as plagiarism evidence.
-
-A more interesting signal is a **rare shared incorrect behavior**.
-
-For example:
-
-```text
-Expected output: 100
-
-S001 actual: 99
-S002 actual: 99
-```
-
-If most of the cohort does not make that mistake, the shared failure may be useful supporting evidence.
-
-Even then, it remains evidence rather than proof of copying.
-
----
-
-## Cohort-Relative Analysis
-
-A fixed threshold such as:
-
-```text
-similarity > X
-```
-
-may behave differently across assignments, languages, starter code, and cohort composition.
-
-BehavClone therefore plans to investigate **cohort-relative evidence**.
-
-The central idea is:
-
-> Common patterns should generally contribute less evidence than unusual shared patterns.
-
-Future experiments will investigate frequency-aware or IDF-like weighting and percentile/rank-based evidence rather than assuming one universal plagiarism threshold.
-
----
-
-## Starter Code
-
-Instructor-provided starter code is a major confounder.
-
-If every student receives the same implementation scaffold, shared starter material should not artificially increase the evidence against a pair of students.
-
-Starter-code exclusion is therefore the next major research milestone.
-
-It is **not yet implemented** in the current prototype.
-
----
-
-## Behavioral Evidence
-
-The repository already contains synthetic automated-test-result data for future experiments.
-
-The planned behavioral layer will distinguish:
-
-```text
-shared PASS
-shared common FAIL
-shared rare FAIL
-identical incorrect output
-different incorrect output
-```
-
-The research question is not simply whether two submissions behave the same.
-
-It is whether **unusual shared incorrect behavior** adds useful evidence beyond structural similarity.
-
-This layer is **planned, not yet implemented**.
-
----
-
-## Threat Model
-
-The project considers transformations such as:
-
-### Current baseline targets
-
-- formatting changes,
-- comments,
-- identifier renaming,
-- method renaming,
-- class renaming,
-- filename changes,
-- method permutation, and
-- file reorganization.
-
-### Harder transformations for later study
-
-- dead-code insertion,
-- statement reordering,
-- method extraction,
-- method inlining,
-- class splitting,
-- class merging,
-- control-flow rewriting,
-- alternative algorithms, and
-- deeper semantic rewrites.
-
-The goal is not to claim universal robustness.
-
-The goal is to measure which transformations each evidence layer can and cannot tolerate.
-
-See [`docs/threat-model.md`](docs/threat-model.md) for the evolving threat model.
-
----
-
-## Evaluation Strategy
-
-Evaluation will focus on controlled, interpretable research questions rather than a single unsupported accuracy number.
-
-Planned measurements include:
-
-- transformation robustness,
-- seeded suspicious-pair retrieval,
-- ranking behavior,
-- false-positive surfacing,
-- fragment correspondence quality,
-- method-permutation robustness,
-- representation ablations,
-- starter-code exclusion ablations,
-- cohort-frequency ablations, and
-- behavioral-evidence ablations.
-
-A particularly important question is:
-
-> How often are independently written solutions surfaced as highly similar?
-
-This makes false-positive analysis a first-class part of the research design.
-
----
-
-## Synthetic Benchmark Philosophy
-
-The project begins with synthetic submissions because transformations can be controlled precisely.
-
-A benchmark can start from a base implementation and create variants involving:
-
-```text
-rename identifiers
-rename methods
-rename classes
-rename files
-permute methods
-move methods between files
-insert unrelated fragments
-change literals
-change operators
-insert dead code
-rewrite control flow
-```
-
-Because the transformation is known, robustness can be measured without pretending that synthetic labels establish real-world authorship.
-
-Evaluation on real student submissions should only be performed with appropriate authorization, anonymization, and privacy safeguards.
-
----
+The authentic source dataset and JPlag executable are intentionally kept outside the repository. Public metadata, pinned provenance, experiment code, and derived artifacts are retained in the project. Frozen result artifacts are protected by regression tests.
 
 ## Installation
 
-BehavClone currently targets Python 3.11+ and Java source analysis.
-
-Clone the repository:
+Requirements: Python `>=3.11` and Java source submissions for the current analysis pipeline.
 
 ```bash
 git clone https://github.com/maria-habib17/behavclone.git
 cd behavclone
-```
-
-Create a virtual environment:
-
-```bash
 python -m venv .venv
 ```
 
-### Windows PowerShell
+Windows PowerShell:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 python -m pip install -e ".[dev]"
 ```
 
----
-
-## Run the Synthetic Demo
-
-The repository includes a small synthetic Java assignment.
-
-Run:
+## Synthetic demo
 
 ```powershell
 behavclone analyze datasets/synthetic/demo-assignment
 ```
 
-The demo uses pseudonymous synthetic submissions rather than real student work.
+The demo uses synthetic pseudonymous submissions rather than private student work.
 
----
-
-## Run the Test Suite
-
-```powershell
-python -m pytest -q
-```
-
-Current verified result:
-
-```text
-.......................................  [100%]
-39 passed
-```
-
-Run the static quality check:
+## Quality checks
 
 ```powershell
 python -m ruff check .
+python -m pytest -q
 ```
 
-Current verified result:
+Current frozen research milestone:
 
 ```text
-All checks passed!
+Ruff: all checks passed
+pytest: 296 passed
 ```
+
+GitHub Actions runs automated quality checks on pushes and pull requests.
 
 ---
 
-## Project Structure
+# Project structure
 
 ```text
 behavclone/
-|
 |-- behavclone/
-|   |-- api/
+|   |-- baselines/
 |   |-- behavior/
 |   |-- cohort/
 |   |-- evidence/
@@ -746,197 +377,89 @@ behavclone/
 |   |-- matching/
 |   |-- normalization/
 |   `-- parsing/
-|
 |-- datasets/
 |   `-- synthetic/
-|
 |-- docs/
 |   |-- architecture.md
+|   |-- evaluation.md
 |   |-- methodology.md
+|   |-- related-work.md
 |   `-- threat-model.md
-|
 |-- experiments/
-|
+|-- results/
 |-- tests/
 |   |-- integration/
 |   |-- regression/
 |   |-- synthetic/
 |   `-- unit/
-|
+|-- .github/workflows/
 |-- README.md
 |-- LICENSE
 `-- pyproject.toml
 ```
 
-Some modules and test directories are reserved for later research layers and may not yet contain implemented functionality.
+## Implemented research components
 
----
-
-## Research Status
-
-### Implemented
-
-- [x] Assignment configuration
-- [x] Submission discovery
-- [x] Recursive Java-file discovery
-- [x] Tree-sitter Java parsing
-- [x] Method extraction
-- [x] Constructor extraction
-- [x] Raw token representation
-- [x] Normalized token representation
-- [x] Structural representation
+- [x] whole-submission Java ingestion
+- [x] recursive Java discovery
+- [x] Tree-sitter method and constructor extraction
+- [x] raw, normalized, and structural representations
 - [x] LCS-based fragment similarity
-- [x] Pairwise fragment-similarity matrices
-- [x] Maximum-weight fragment assignment
-- [x] Whole-submission comparison
-- [x] Architecture-renaming integration tests
-- [x] Method-permutation tests
-- [x] Distractor-fragment integration test
-- [x] Fragment coverage reporting
+- [x] exact maximum-weight one-to-one fragment assignment
+- [x] fragment coverage reporting
+- [x] conservative starter-code exclusion
+- [x] cohort document-frequency and rarity evidence
+- [x] imported behavioral-result validation
+- [x] shared-failure and identical wrong-output evidence
+- [x] behavioral rarity evidence
+- [x] separate multi-signal evidence reports
+- [x] controlled transformation benchmark
+- [x] scaled false-positive experiment
+- [x] JPlag 6.3.0 baseline integration
+- [x] authentic external-cohort measurement
+- [x] frozen reproducibility regression tests
+- [x] automated CI quality checks
 
-### Next Research Milestones
+## Research directions
 
-- [ ] Starter-code exclusion
-- [ ] Larger synthetic transformation benchmark
-- [ ] Cohort-relative fragment rarity
-- [ ] Automated-test-result ingestion
-- [ ] Shared-failure analysis
-- [ ] Identical incorrect-output evidence
-- [ ] Combined evidence reports
-- [ ] Instructor review workflow
-- [ ] Scalability experiments
-- [ ] Polynomial-time fragment assignment
-- [ ] Behavior-guided structural alignment
+Current extensions include larger and more architecture-diverse authentic cohorts, authentic behavioral observations, behavior-guided structural alignment, richer fragment granularities, assignment sensitivity analysis, scalable assignment algorithms, and instructor-facing evidence review.
 
 ---
 
-## Planned Behavior-Guided Structural Alignment
+# Responsible use
 
-A longer-term research direction is to use behavioral information to help identify which structurally different fragments perform corresponding roles.
+Source-code similarity is not proof of authorship or misconduct. Similarity can arise from assignment requirements, starter code, common algorithms, course examples, standard APIs, conventional implementation patterns, or independent work.
 
-Instead of asking only:
+BehavClone is designed around **human-in-the-loop review**. Automated analysis may help prioritize candidate pairs and organize evidence, but consequential academic-integrity decisions require instructor judgment, appropriate context, and applicable institutional processes.
 
-> Which methods look most alike?
+## Privacy and security
 
-a future system could also ask:
+The project favors pseudonymous identifiers, synthetic or appropriately licensed public datasets, minimal retention of identifying information, explicit authorization for private student submissions, and avoiding publication of private student code.
 
-> Which methods participate in producing the same observable behavior under the same tests?
-
-This may help align functionality across substantially different program architectures.
-
-This is a research direction only and is **not implemented in the current prototype**.
+The current behavioral layer imports results rather than executing untrusted submissions. Any future execution should occur only in an appropriately isolated environment with resource and network restrictions.
 
 ---
 
-## Responsible Use
+# Documentation
 
-Source-code similarity is not proof of authorship or misconduct.
-
-Similarities can arise from:
-
-- assignment requirements,
-- starter code,
-- common algorithms,
-- course examples,
-- standard APIs,
-- conventional programming patterns, or
-- independently written solutions.
-
-BehavClone is therefore designed around **human-in-the-loop review**.
-
-Automated analysis may help prioritize candidate pairs and organize evidence, but consequential academic-integrity decisions require instructor judgment and appropriate institutional processes.
+- [`docs/architecture.md`](docs/architecture.md) — architecture and evidence philosophy
+- [`docs/methodology.md`](docs/methodology.md) — research methodology
+- [`docs/evaluation.md`](docs/evaluation.md) — experiments, quantitative findings, negative results, and threats to validity
+- [`docs/related-work.md`](docs/related-work.md) — JPlag-centered related work and contribution boundary
+- [`docs/threat-model.md`](docs/threat-model.md) — transformations and known limitations
 
 ---
 
-## Privacy
+# Research status
 
-Real student source code can contain sensitive educational information.
+BehavClone is an experimental research prototype, not an academic-integrity decision system.
 
-The project therefore favors:
+The current project investigates whether **architecture-flexible structural correspondence, cohort context, and shared incorrect-behavior evidence can provide complementary, interpretable evidence for reviewing suspicious programming-assignment similarity**.
 
-- pseudonymous submission identifiers,
-- synthetic public datasets,
-- minimal retention of identifying information,
-- explicit authorization before using real submissions, and
-- avoiding publication of student code without permission.
+JPlag is the principal established baseline. The strongest unresolved empirical question is whether this multi-signal evidence design remains useful on larger, genuinely architecture-diverse authentic assignment cohorts with independently available behavioral observations.
 
 ---
 
-## Security
-
-The current prototype analyzes source text and does not require executing untrusted student programs.
-
-If automated execution is introduced later, student submissions should be treated as untrusted code and executed only inside an appropriately isolated environment with resource and network restrictions.
-
----
-
-## Design Principles
-
-BehavClone is guided by several principles:
-
-**Whole submission over filename correspondence**  
-A submission is the analysis unit; filenames are metadata rather than required matching keys.
-
-**Evidence over verdicts**  
-Similarity signals should remain inspectable rather than being silently converted into misconduct decisions.
-
-**Behavior requires context**  
-Correct shared behavior is expected. Rare shared incorrect behavior is a more meaningful research target.
-
-**Cohort context matters**  
-Common assignment patterns should not carry the same evidential weight as unusual shared structures.
-
-**Assumptions should be testable**  
-Fragment definitions, normalization strategies, matching algorithms, and thresholds should be exposed to ablation and robustness experiments.
-
-**Human review remains mandatory**  
-The system supports investigation; it does not replace it.
-
----
-
-## Documentation
-
-More detailed design notes are available in:
-
-- [`docs/architecture.md`](docs/architecture.md) — system architecture and component boundaries
-- [`docs/methodology.md`](docs/methodology.md) — research methodology and evidence philosophy
-- [`docs/threat-model.md`](docs/threat-model.md) — transformations, risks, and known limitations
-
----
-
-## Roadmap
-
-The immediate development sequence is:
-
-```text
-Current structural baseline
-          |
-          v
-Starter-code exclusion
-          |
-          v
-Synthetic transformation benchmark
-          |
-          v
-Cohort-relative rarity
-          |
-          v
-Behavioral test-result ingestion
-          |
-          v
-Rare shared-failure evidence
-          |
-          v
-Interpretable pair evidence report
-          |
-          v
-Instructor review workflow
-```
-
-Later work can investigate semantic representations, execution-guided alignment, larger datasets, and scalability.
-
----
-
-## License
+# License
 
 This project is licensed under the MIT License.
