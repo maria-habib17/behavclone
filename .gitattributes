@@ -1,2 +1,4 @@
 results/**/*.json text eol=lf
 results/**/*.csv text eol=lf
+docs/**/*.md text eol=lf
+.gitattributes text eol=lf
