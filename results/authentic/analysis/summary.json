@@ -1,0 +1,378 @@
+{
+  "behavclone_cohort_all_pairs": {
+    "max_rarity": {
+      "max": 2.6739764335716716,
+      "mean": 1.2074841319538474,
+      "median": 1.2076393647782446,
+      "min": 1.064538521137571,
+      "one_count": 0,
+      "unique_values": 4,
+      "zero_count": 0
+    },
+    "mean_rarity": {
+      "max": 1.2087174751125669,
+      "mean": 1.0652874185526937,
+      "median": 1.0739917056317738,
+      "min": 1.009929003251934,
+      "one_count": 0,
+      "unique_values": 10,
+      "zero_count": 0
+    },
+    "pair_specific_feature_count": {
+      "max": 3,
+      "mean": 0.0380952380952381,
+      "median": 0,
+      "min": 0,
+      "one_count": 1,
+      "unique_values": 3,
+      "zero_count": 103
+    },
+    "shared_feature_count": {
+      "max": 36,
+      "mean": 30.876190476190477,
+      "median": 36,
+      "min": 13,
+      "one_count": 0,
+      "unique_values": 9,
+      "zero_count": 0
+    }
+  },
+  "behavclone_cohort_within_normalized_maximal_pairs": {
+    "max_rarity": {
+      "max": 1.2076393647782446,
+      "mean": 1.2076393647782446,
+      "median": 1.2076393647782446,
+      "min": 1.2076393647782446,
+      "one_count": 0,
+      "unique_values": 1,
+      "zero_count": 0
+    },
+    "mean_rarity": {
+      "max": 1.0739917056317738,
+      "mean": 1.0739917056317738,
+      "median": 1.0739917056317738,
+      "min": 1.0739917056317738,
+      "one_count": 0,
+      "unique_values": 1,
+      "zero_count": 0
+    },
+    "pair_specific_feature_count": {
+      "max": 0,
+      "mean": 0.0,
+      "median": 0,
+      "min": 0,
+      "one_count": 0,
+      "unique_values": 1,
+      "zero_count": 55
+    },
+    "shared_feature_count": {
+      "max": 36,
+      "mean": 36.0,
+      "median": 36,
+      "min": 36,
+      "one_count": 0,
+      "unique_values": 1,
+      "zero_count": 0
+    }
+  },
+  "behavioral_evidence": "unavailable",
+  "case": "case-01",
+  "cohort": "non-plagiarized",
+  "combined_score": false,
+  "dataset": "IR-Plag",
+  "dataset_label": "dataset-provided non-plagiarized",
+  "distributions": {
+    "behavclone_normalized": {
+      "max": 1.0,
+      "mean": 0.9167937142500074,
+      "median": 1.0,
+      "min": 0.5576923076923077,
+      "one_count": 55,
+      "unique_values": 10,
+      "zero_count": 0
+    },
+    "behavclone_raw": {
+      "max": 1.0,
+      "mean": 0.9060837984985419,
+      "median": 1.0,
+      "min": 0.5,
+      "one_count": 55,
+      "unique_values": 10,
+      "zero_count": 0
+    },
+    "behavclone_structural": {
+      "max": 1.0,
+      "mean": 0.9215002980736702,
+      "median": 1.0,
+      "min": 0.5660377358490566,
+      "one_count": 56,
+      "unique_values": 7,
+      "zero_count": 0
+    },
+    "jplag_average": {
+      "max": 1.0,
+      "mean": 0.7374149659863946,
+      "median": 1.0,
+      "min": 0.0,
+      "one_count": 66,
+      "unique_values": 3,
+      "zero_count": 27
+    },
+    "jplag_max": {
+      "max": 1.0,
+      "mean": 0.7428571428571429,
+      "median": 1.0,
+      "min": 0.0,
+      "one_count": 78,
+      "unique_values": 2,
+      "zero_count": 27
+    }
+  },
+  "experiment": "authentic-false-positive-analysis",
+  "fragment_coverage": {
+    "left_coverage": {
+      "max": 1.0,
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "one_count": 105,
+      "unique_values": 1,
+      "zero_count": 0
+    },
+    "left_fragment_count": {
+      "max": 1,
+      "mean": 1.0,
+      "median": 1,
+      "min": 1,
+      "one_count": 105,
+      "unique_values": 1,
+      "zero_count": 0
+    },
+    "matched_count": {
+      "max": 1,
+      "mean": 1.0,
+      "median": 1,
+      "min": 1,
+      "one_count": 105,
+      "unique_values": 1,
+      "zero_count": 0
+    },
+    "right_coverage": {
+      "max": 1.0,
+      "mean": 1.0,
+      "median": 1.0,
+      "min": 1.0,
+      "one_count": 105,
+      "unique_values": 1,
+      "zero_count": 0
+    },
+    "right_fragment_count": {
+      "max": 1,
+      "mean": 1.0,
+      "median": 1,
+      "min": 1,
+      "one_count": 105,
+      "unique_values": 1,
+      "zero_count": 0
+    }
+  },
+  "interpretation_boundaries": [
+    "Dataset-provided labels are used for false-positive and similarity-ambiguity analysis; they do not establish author intent.",
+    "BehavClone and JPlag similarity values are not mathematically equivalent scores.",
+    "Large exact-score ties make lexically tie-broken top-K order unsuitable as unique rank evidence.",
+    "The authentic cohort contains one extracted fragment per submission, so it does not validate architecture-flexible multi-fragment matching.",
+    "Behavioral evidence is unavailable for this authentic cohort.",
+    "No universal plagiarism threshold, plagiarism verdict, or general superiority claim is supported."
+  ],
+  "language": "Java",
+  "maximal_similarity_overlap": {
+    "behavclone_normalized_count": 55,
+    "behavclone_only_count": 0,
+    "intersection_count": 55,
+    "jplag_average_count": 66,
+    "jplag_only_count": 11
+  },
+  "pair_count": 105,
+  "pair_specific_nonzero_pairs": [
+    {
+      "left_submission_id": "A007",
+      "pair_specific_feature_count": 1,
+      "right_submission_id": "A013"
+    },
+    {
+      "left_submission_id": "A014",
+      "pair_specific_feature_count": 3,
+      "right_submission_id": "A015"
+    }
+  ],
+  "plagiarism_verdict": false,
+  "rank_association_spearman": {
+    "behavclone_normalized_vs_jplag_average": 0.9278167094963755,
+    "behavclone_normalized_vs_jplag_max": 0.8202853277454307,
+    "behavclone_raw_vs_jplag_average": 0.9278167094963755,
+    "behavclone_raw_vs_jplag_max": 0.8202853277454307,
+    "behavclone_structural_vs_jplag_average": 0.8849342846902604,
+    "behavclone_structural_vs_jplag_max": 0.8275492424085708
+  },
+  "submission_count": 15,
+  "tie_structure": {
+    "behavclone_normalized": {
+      "distinct_score_count": 10,
+      "groups": [
+        {
+          "pair_count": 55,
+          "score": 1.0
+        },
+        {
+          "pair_count": 11,
+          "score": 0.9736842105263158
+        },
+        {
+          "pair_count": 1,
+          "score": 0.972972972972973
+        },
+        {
+          "pair_count": 11,
+          "score": 0.9473684210526315
+        },
+        {
+          "pair_count": 11,
+          "score": 0.8674698795180723
+        },
+        {
+          "pair_count": 2,
+          "score": 0.8395061728395061
+        },
+        {
+          "pair_count": 1,
+          "score": 0.5769230769230769
+        },
+        {
+          "pair_count": 1,
+          "score": 0.5765765765765766
+        },
+        {
+          "pair_count": 11,
+          "score": 0.5660377358490566
+        },
+        {
+          "pair_count": 1,
+          "score": 0.5576923076923077
+        }
+      ],
+      "largest_tie_group": 55
+    },
+    "behavclone_raw": {
+      "distinct_score_count": 10,
+      "groups": [
+        {
+          "pair_count": 55,
+          "score": 1.0
+        },
+        {
+          "pair_count": 11,
+          "score": 0.9736842105263158
+        },
+        {
+          "pair_count": 1,
+          "score": 0.972972972972973
+        },
+        {
+          "pair_count": 11,
+          "score": 0.9473684210526315
+        },
+        {
+          "pair_count": 11,
+          "score": 0.8433734939759037
+        },
+        {
+          "pair_count": 2,
+          "score": 0.8148148148148148
+        },
+        {
+          "pair_count": 1,
+          "score": 0.5192307692307693
+        },
+        {
+          "pair_count": 11,
+          "score": 0.5094339622641509
+        },
+        {
+          "pair_count": 1,
+          "score": 0.5045045045045045
+        },
+        {
+          "pair_count": 1,
+          "score": 0.5
+        }
+      ],
+      "largest_tie_group": 55
+    },
+    "behavclone_structural": {
+      "distinct_score_count": 7,
+      "groups": [
+        {
+          "pair_count": 56,
+          "score": 1.0
+        },
+        {
+          "pair_count": 22,
+          "score": 0.9739130434782609
+        },
+        {
+          "pair_count": 11,
+          "score": 0.88
+        },
+        {
+          "pair_count": 2,
+          "score": 0.8524590163934426
+        },
+        {
+          "pair_count": 2,
+          "score": 0.5769230769230769
+        },
+        {
+          "pair_count": 1,
+          "score": 0.5662650602409639
+        },
+        {
+          "pair_count": 11,
+          "score": 0.5660377358490566
+        }
+      ],
+      "largest_tie_group": 56
+    },
+    "jplag_average": {
+      "distinct_score_count": 3,
+      "groups": [
+        {
+          "pair_count": 66,
+          "score": 1.0
+        },
+        {
+          "pair_count": 12,
+          "score": 0.9523809523809523
+        },
+        {
+          "pair_count": 27,
+          "score": 0.0
+        }
+      ],
+      "largest_tie_group": 66
+    },
+    "jplag_max": {
+      "distinct_score_count": 2,
+      "groups": [
+        {
+          "pair_count": 78,
+          "score": 1.0
+        },
+        {
+          "pair_count": 27,
+          "score": 0.0
+        }
+      ],
+      "largest_tie_group": 78
+    }
+  }
+}

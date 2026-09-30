@@ -1,5 +1,3 @@
-from pathlib import Path
-
 import pytest
 
 from experiments.analyze_authentic import (
@@ -56,9 +54,3 @@ def test_tie_summary_reports_largest_group():
             "pair_count": 1,
         },
     ]
-
-
-def test_analysis_output_does_not_exist_yet():
-    assert not Path(
-        "results/authentic/analysis"
-    ).exists()
