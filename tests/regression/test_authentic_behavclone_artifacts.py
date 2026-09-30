@@ -3,30 +3,26 @@ import hashlib
 import json
 from pathlib import Path
 
-ROOT = Path(
-    "results/authentic/behavclone"
-)
+ROOT = Path("results/authentic/behavclone")
 
 EXPECTED_HASHES = {
     "pairs.csv": (
-        "0d063996f6249ff5f8fcf28816fb4f7eb"
-        "1f73d228d256cf6c0e7f04c37c323d4"
+        "0d063996f6249ff5f8fcf28816fb4f7e"
+        "b1f73d228d256cf6c0e7f04c37c323d4"
     ),
     "pairs.json": (
-        "4f423eabfb7449c78c5853155b44b3eb4"
-        "6c94e5510bbbaF143b506e6bbaa2ee7"
-    ).lower(),
+        "16583c07e239ccfd241414768b8c1858"
+        "c0408e7c0fc14110dfdfcc9184ce7a6a"
+    ),
     "summary.json": (
-        "74a163a180c6eb0cecb538d73028946c1c"
-        "efa258a5da41d7df790d57cab3be82"
+        "44289f5fafe094abaa0521d5372354f23"
+        "6362062c5e88a622bdd923199baf126"
     ),
 }
 
 
 def digest(path: Path) -> str:
-    return hashlib.sha256(
-        path.read_bytes()
-    ).hexdigest()
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def test_authentic_behavclone_artifact_hashes():
@@ -35,24 +31,18 @@ def test_authentic_behavclone_artifact_hashes():
 
 
 def test_authentic_behavclone_pair_count():
-    with (
-        ROOT / "pairs.csv"
-    ).open(
+    with (ROOT / "pairs.csv").open(
         encoding="utf-8",
         newline="",
     ) as handle:
-        rows = list(
-            csv.DictReader(handle)
-        )
+        rows = list(csv.DictReader(handle))
 
     assert len(rows) == 105
 
 
 def test_authentic_behavclone_anonymous_ids():
     rows = json.loads(
-        (
-            ROOT / "pairs.json"
-        ).read_text(
+        (ROOT / "pairs.json").read_text(
             encoding="utf-8"
         )
     )
@@ -74,9 +64,7 @@ def test_authentic_behavclone_anonymous_ids():
 
 def test_authentic_behavclone_summary_boundary():
     summary = json.loads(
-        (
-            ROOT / "summary.json"
-        ).read_text(
+        (ROOT / "summary.json").read_text(
             encoding="utf-8"
         )
     )
@@ -88,11 +76,6 @@ def test_authentic_behavclone_summary_boundary():
     assert summary["pair_count"] == 105
     assert summary["matching_metric"] == "normalized"
     assert summary["cohort_ngram_size"] == 4
-
-    assert (
-        summary["behavioral_evidence"]
-        == "unavailable"
-    )
-
+    assert summary["behavioral_evidence"] == "unavailable"
     assert summary["combined_score"] is False
     assert summary["plagiarism_verdict"] is False

@@ -44,14 +44,17 @@ def _write_json(
         parents=True,
         exist_ok=True,
     )
-    path.write_text(
+    serialized = (
         json.dumps(
             payload,
             indent=2,
             sort_keys=True,
         )
-        + "\n",
-        encoding="utf-8",
+        + "\n"
+    )
+
+    path.write_bytes(
+        serialized.encode("utf-8")
     )
 
 
