@@ -1,0 +1,18 @@
+{
+  "dataset": "IR-Plag",
+  "dataset_repository": "oscarkarnalim/sourcecodeplagiarismdataset",
+  "dataset_commit": "f07e95120680b25f78659ed63cd6130fd05b2df8",
+  "selected_case": "case-01",
+  "cohort": "non-plagiarized",
+  "language": "java",
+  "submission_count": 15,
+  "selection_rule": "case-01 selected before similarity measurement; no case was selected based on BehavClone or JPlag scores",
+  "unit_of_analysis": "complete submission",
+  "source_publication_policy": "dataset source remains external; BehavClone repository stores only derived metadata and results",
+  "primary_purpose": "authentic false-positive and similarity-ambiguity evaluation",
+  "behavioral_evidence": "unavailable unless common test observations are independently established",
+  "labels": "dataset-provided non-plagiarized cohort",
+  "interpretation_boundary": "dataset labels are treated as benchmark provenance, not independently verified claims about author intent",
+  "combined_score": false,
+  "plagiarism_verdict": false
+}
