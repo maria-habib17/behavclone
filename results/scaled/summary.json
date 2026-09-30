@@ -1,0 +1,112 @@
+{
+  "assignment_metric": "normalized",
+  "experiment": "scaled-controlled-cohort",
+  "family_count": 4,
+  "interpretation": "Controlled synthetic evaluation with two explicit labeling views. Seeded-edge retrieval treats only declared base-to-transformation edges as targets. Provenance-family retrieval treats every within-family pair as related and cross-family pairs as controls. Results characterize this synthetic cohort only and do not establish plagiarism-detection accuracy or general superiority.",
+  "k_values": [
+    5,
+    10,
+    20
+  ],
+  "label_views": {
+    "provenance_families": {
+      "control_count": 96,
+      "metrics": {
+        "normalized": {
+          "average_precision": 0.4989409893025989,
+          "first_control_rank": 7,
+          "precision_at_k": {
+            "10": 0.6,
+            "20": 0.4,
+            "5": 1.0
+          },
+          "recall_at_k": {
+            "10": 0.25,
+            "20": 0.3333333333333333,
+            "5": 0.20833333333333334
+          }
+        },
+        "raw": {
+          "average_precision": 1.0,
+          "first_control_rank": 25,
+          "precision_at_k": {
+            "10": 1.0,
+            "20": 1.0,
+            "5": 1.0
+          },
+          "recall_at_k": {
+            "10": 0.4166666666666667,
+            "20": 0.8333333333333334,
+            "5": 0.20833333333333334
+          }
+        },
+        "structural": {
+          "average_precision": 0.4989409893025989,
+          "first_control_rank": 7,
+          "precision_at_k": {
+            "10": 0.6,
+            "20": 0.4,
+            "5": 1.0
+          },
+          "recall_at_k": {
+            "10": 0.25,
+            "20": 0.3333333333333333,
+            "5": 0.20833333333333334
+          }
+        }
+      },
+      "pair_count": 120,
+      "related_count": 24
+    },
+    "seeded_edges": {
+      "control_count": 108,
+      "metrics": {
+        "normalized": {
+          "average_precision": 0.36868430081615083,
+          "first_control_rank": 3,
+          "precision_at_k": {
+            "10": 0.3,
+            "20": 0.25,
+            "5": 0.6
+          },
+          "recall_at_k": {
+            "10": 0.25,
+            "20": 0.4166666666666667,
+            "5": 0.25
+          }
+        },
+        "raw": {
+          "average_precision": 0.740272337311811,
+          "first_control_rank": 3,
+          "precision_at_k": {
+            "10": 0.7,
+            "20": 0.55,
+            "5": 0.8
+          },
+          "recall_at_k": {
+            "10": 0.5833333333333334,
+            "20": 0.9166666666666666,
+            "5": 0.3333333333333333
+          }
+        },
+        "structural": {
+          "average_precision": 0.36868430081615083,
+          "first_control_rank": 3,
+          "precision_at_k": {
+            "10": 0.3,
+            "20": 0.25,
+            "5": 0.6
+          },
+          "recall_at_k": {
+            "10": 0.25,
+            "20": 0.4166666666666667,
+            "5": 0.25
+          }
+        }
+      },
+      "pair_count": 120,
+      "related_count": 12
+    }
+  },
+  "submission_count": 16
+}

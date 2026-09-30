@@ -8,16 +8,15 @@ from experiments.models import (
 )
 
 
-def test_related_pair_requires_transformation():
-    with pytest.raises(
-        ValueError,
-        match="require a transformation",
-    ):
-        BenchmarkPair(
-            left_submission_id="S001",
-            right_submission_id="S002",
-            related=True,
-        )
+def test_related_pair_can_omit_transformation_metadata():
+    pair = BenchmarkPair(
+        left_submission_id="A",
+        right_submission_id="B",
+        related=True,
+    )
+
+    assert pair.related is True
+    assert pair.transformation is None
 
 
 def test_unrelated_pair_cannot_have_transformation():

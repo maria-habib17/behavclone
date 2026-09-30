@@ -21,11 +21,6 @@ class BenchmarkPair:
     transformation: TransformationKind | None = None
 
     def __post_init__(self) -> None:
-        if self.related and self.transformation is None:
-            raise ValueError(
-                "Related benchmark pairs require a transformation."
-            )
-
         if not self.related and self.transformation is not None:
             raise ValueError(
                 "Unrelated benchmark pairs cannot declare a transformation."
