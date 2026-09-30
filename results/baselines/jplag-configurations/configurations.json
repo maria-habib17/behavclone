@@ -1,0 +1,327 @@
+{
+  "configuration_count": 3,
+  "configurations": {
+    "frequency": {
+      "frequency_analysis": true,
+      "jar_sha256": "5f2c21e8b88ed77134effcb3a5a3ab13d188f6a3e16d401387f7479e92db9aa2",
+      "normalized": false,
+      "version": "6.3.0"
+    },
+    "normalized": {
+      "frequency_analysis": false,
+      "jar_sha256": "5f2c21e8b88ed77134effcb3a5a3ab13d188f6a3e16d401387f7479e92db9aa2",
+      "normalized": true,
+      "version": "6.3.0"
+    },
+    "standard": {
+      "frequency_analysis": false,
+      "jar_sha256": "5f2c21e8b88ed77134effcb3a5a3ab13d188f6a3e16d401387f7479e92db9aa2",
+      "normalized": false,
+      "version": "6.3.0"
+    }
+  },
+  "experiment": "controlled-jplag-configuration-ablation",
+  "interpretation": "JPlag configuration sensitivity on a small synthetic controlled corpus. Pairwise CSV similarities are reported as exported by JPlag. Unchanged CSV values do not imply that an option has no effect elsewhere in JPlag's analysis or report. These results do not establish general superiority or plagiarism-detection accuracy.",
+  "jar_sha256": "5f2c21e8b88ed77134effcb3a5a3ab13d188f6a3e16d401387f7479e92db9aa2",
+  "pair_count_per_configuration": 9,
+  "rows": [
+    {
+      "average_similarity": 1.0,
+      "configuration": "standard",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "ID_RENAME",
+      "transformation": "identifier_rename"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "standard",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "METHOD_REORDER",
+      "transformation": "method_reorder"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "standard",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "CLASS_RENAME",
+      "transformation": "class_rename"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "standard",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "FILE_RENAME",
+      "transformation": "file_rename"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "standard",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "DEAD_CODE",
+      "transformation": "dead_code"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "standard",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "CLASS_SPLIT",
+      "transformation": "class_split"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "standard",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": false,
+      "related": false,
+      "right_submission_id": "UNRELATED_A",
+      "transformation": "control"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "standard",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": false,
+      "related": false,
+      "right_submission_id": "UNRELATED_B",
+      "transformation": "control"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "standard",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": false,
+      "right_submission_id": "LOOKALIKE",
+      "transformation": "control"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "normalized",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": true,
+      "related": true,
+      "right_submission_id": "ID_RENAME",
+      "transformation": "identifier_rename"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "normalized",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": true,
+      "related": true,
+      "right_submission_id": "METHOD_REORDER",
+      "transformation": "method_reorder"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "normalized",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": true,
+      "related": true,
+      "right_submission_id": "CLASS_RENAME",
+      "transformation": "class_rename"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "normalized",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": true,
+      "related": true,
+      "right_submission_id": "FILE_RENAME",
+      "transformation": "file_rename"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "normalized",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": true,
+      "related": true,
+      "right_submission_id": "DEAD_CODE",
+      "transformation": "dead_code"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "normalized",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": true,
+      "related": true,
+      "right_submission_id": "CLASS_SPLIT",
+      "transformation": "class_split"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "normalized",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": true,
+      "related": false,
+      "right_submission_id": "UNRELATED_A",
+      "transformation": "control"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "normalized",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": true,
+      "related": false,
+      "right_submission_id": "UNRELATED_B",
+      "transformation": "control"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "normalized",
+      "frequency_analysis": false,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": true,
+      "related": false,
+      "right_submission_id": "LOOKALIKE",
+      "transformation": "control"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "frequency",
+      "frequency_analysis": true,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "ID_RENAME",
+      "transformation": "identifier_rename"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "frequency",
+      "frequency_analysis": true,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "METHOD_REORDER",
+      "transformation": "method_reorder"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "frequency",
+      "frequency_analysis": true,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "CLASS_RENAME",
+      "transformation": "class_rename"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "frequency",
+      "frequency_analysis": true,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "FILE_RENAME",
+      "transformation": "file_rename"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "frequency",
+      "frequency_analysis": true,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "DEAD_CODE",
+      "transformation": "dead_code"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "frequency",
+      "frequency_analysis": true,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": false,
+      "related": true,
+      "right_submission_id": "CLASS_SPLIT",
+      "transformation": "class_split"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "frequency",
+      "frequency_analysis": true,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": false,
+      "related": false,
+      "right_submission_id": "UNRELATED_A",
+      "transformation": "control"
+    },
+    {
+      "average_similarity": 0.0,
+      "configuration": "frequency",
+      "frequency_analysis": true,
+      "left_submission_id": "BASE",
+      "max_similarity": 0.0,
+      "normalized": false,
+      "related": false,
+      "right_submission_id": "UNRELATED_B",
+      "transformation": "control"
+    },
+    {
+      "average_similarity": 1.0,
+      "configuration": "frequency",
+      "frequency_analysis": true,
+      "left_submission_id": "BASE",
+      "max_similarity": 1.0,
+      "normalized": false,
+      "related": false,
+      "right_submission_id": "LOOKALIKE",
+      "transformation": "control"
+    }
+  ],
+  "version": "6.3.0"
+}
